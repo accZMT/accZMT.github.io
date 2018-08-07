@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://acczmt.top">
   <title>scrapy实现下载图片 | llt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本篇博客目的：练习使用scrapy，获取站长素材中的所有图标图片,并重写ImagesPipeline，实现分类保存   在命令行新建一个项目    123scrapy startproject zhanzhangsucaicd zhanzhangsucaiscrapy genspider chinaz sc.chinaz.com  打开编辑器items.py文件内容为：   123456im">
+  <meta name="description" content="* 本篇博客目的：练习使用scrapy，获取站长素材中的所有图标图片,并重写ImagesPipeline，实现分类保存  在命令行新建一个项目    123scrapy startproject zhanzhangsucaicd zhanzhangsucaiscrapy genspider chinaz sc.chinaz.com  打开编辑器修改items.py文件内容为：   123456">
 <meta name="keywords" content="Python,scrapy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="scrapy实现下载图片">
 <meta property="og:url" content="http://acczmt.top/2018/08/08/scrapy练习/index.html">
 <meta property="og:site_name" content="llt">
-<meta property="og:description" content="本篇博客目的：练习使用scrapy，获取站长素材中的所有图标图片,并重写ImagesPipeline，实现分类保存   在命令行新建一个项目    123scrapy startproject zhanzhangsucaicd zhanzhangsucaiscrapy genspider chinaz sc.chinaz.com  打开编辑器items.py文件内容为：   123456im">
+<meta property="og:description" content="* 本篇博客目的：练习使用scrapy，获取站长素材中的所有图标图片,并重写ImagesPipeline，实现分类保存  在命令行新建一个项目    123scrapy startproject zhanzhangsucaicd zhanzhangsucaiscrapy genspider chinaz sc.chinaz.com  打开编辑器修改items.py文件内容为：   123456">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://acczmt.top/img/Bing_1280/38997/19.jpg">
-<meta property="og:updated_time" content="2018-08-07T12:26:12.710Z">
+<meta property="og:updated_time" content="2018-08-07T12:37:21.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="scrapy实现下载图片">
-<meta name="twitter:description" content="本篇博客目的：练习使用scrapy，获取站长素材中的所有图标图片,并重写ImagesPipeline，实现分类保存   在命令行新建一个项目    123scrapy startproject zhanzhangsucaicd zhanzhangsucaiscrapy genspider chinaz sc.chinaz.com  打开编辑器items.py文件内容为：   123456im">
+<meta name="twitter:description" content="* 本篇博客目的：练习使用scrapy，获取站长素材中的所有图标图片,并重写ImagesPipeline，实现分类保存  在命令行新建一个项目    123scrapy startproject zhanzhangsucaicd zhanzhangsucaiscrapy genspider chinaz sc.chinaz.com  打开编辑器修改items.py文件内容为：   123456">
 <meta name="twitter:image" content="http://acczmt.top/img/Bing_1280/38997/19.jpg">
   
     <link rel="alternative" href="/atom.xml" title="llt" type="application/atom+xml">
@@ -179,29 +179,31 @@
   	
         <div align="center"><br><img src="/img/Bing_1280/38997/19.jpg" height="600"><br></div>
 
+<h3 id="本篇博客目的："><a href="#本篇博客目的：" class="headerlink" title="* 本篇博客目的："></a>* 本篇博客目的：</h3><p>练习使用scrapy，获取站长素材中的所有<a href="http://sc.chinaz.com/tubiao/" target="_blank" rel="noopener">图标</a>图片,并重写ImagesPipeline，实现分类保存</p>
 <ul>
-<li>本篇博客目的：<br>练习使用scrapy，获取站长素材中的所有<a href="http://sc.chinaz.com/tubiao/" target="_blank" rel="noopener">图标</a>图片,并重写ImagesPipeline，实现分类保存</li>
-</ul>
-<ol>
 <li><strong>在命令行新建一个项目</strong>  </li>
-</ol>
+</ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scrapy startproject zhanzhangsucai</span><br><span class="line">cd zhanzhangsucai</span><br><span class="line">scrapy genspider chinaz sc.chinaz.com</span><br></pre></td></tr></table></figure>
-<ol>
-<li>打开编辑器items.py文件内容为： </li>
-</ol>
+<ul>
+<li><strong>打开编辑器修改items.py文件内容为：</strong> </li>
+</ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZhanzhangsucaiItem</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line"></span><br><span class="line">    title = scrapy.Field()</span><br><span class="line">    src = scrapy.Field()</span><br></pre></td></tr></table></figure>
-<ol>
-<li>spiders/chinaz.py文件内容为： </li>
-</ol>
+<ul>
+<li><strong>spiders/chinaz.py文件内容为：</strong> </li>
+</ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> ..items <span class="keyword">import</span> ZhanzhangsucaiItem</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ChinazSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">'chinaz'</span></span><br><span class="line">    allowed_domains = [<span class="string">'sc.chinaz.com'</span>]</span><br><span class="line">    start_urls = [<span class="string">'http://sc.chinaz.com/tubiao/'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        <span class="string">"""获取所有图片"""</span></span><br><span class="line">        href_list = response.xpath(<span class="string">'//li/span/a/@href'</span>).extract()</span><br><span class="line">        <span class="keyword">for</span> href <span class="keyword">in</span> href_list:</span><br><span class="line">            <span class="keyword">yield</span> scrapy.Request(url=href,callback=self.get_detail_img_url)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 获取下一页</span></span><br><span class="line">        next_page = response.xpath(<span class="string">'//a[@class="nextpage"]/@href'</span>).extract()</span><br><span class="line">        <span class="keyword">if</span> len(next_page) != <span class="number">0</span>:</span><br><span class="line">            next_url = <span class="string">'http://sc.chinaz.com/tubiao/'</span> + next_page[<span class="number">0</span>]</span><br><span class="line">            <span class="keyword">yield</span> scrapy.Request(next_url, callback=self.parse)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_detail_img_url</span><span class="params">(self,response)</span>:</span></span><br><span class="line">        title = response.xpath(<span class="string">'//div[@class="text_wrap"]/h2/a/text()'</span>).extract()[<span class="number">0</span>]</span><br><span class="line">        srcs = response.xpath(<span class="string">'//div[@class="png_pic"]/img/@src'</span>).extract()</span><br><span class="line">        <span class="keyword">for</span> src <span class="keyword">in</span> srcs:</span><br><span class="line">            item = ZhanzhangsucaiItem()</span><br><span class="line">            item[<span class="string">'title'</span>] = title</span><br><span class="line">            item[<span class="string">'src'</span>] = [src]</span><br><span class="line">            <span class="keyword">yield</span> item</span><br></pre></td></tr></table></figure>
-<ol>
-<li>pipelines.py文件,删除原来的内容，添加新的内容为： </li>
-</ol>
+<ul>
+<li><strong>pipelines.py文件,删除原来的内容，添加新的内容为：</strong> </li>
+</ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scrapy.pipelines.images <span class="keyword">import</span> ImagesPipeline</span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IconPipeline</span><span class="params">(ImagesPipeline)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_media_requests</span><span class="params">(self, item, info)</span>:</span></span><br><span class="line">        <span class="comment"># for src in item['src']:</span></span><br><span class="line">        src = item[<span class="string">'src'</span>][<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">yield</span> scrapy.Request(url=src,meta=&#123;<span class="string">'item'</span>:item&#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 管道里面提供了一系列的内置方法，这些方法会自动从第一个执行到最后一个</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">file_path</span><span class="params">(self, request, response=None, info=None)</span>:</span></span><br><span class="line"></span><br><span class="line">        item = request.meta[<span class="string">'item'</span>]</span><br><span class="line">        title = item[<span class="string">'title'</span>]</span><br><span class="line">        src = item[<span class="string">'src'</span>][<span class="number">0</span>].split(<span class="string">'/'</span>)[<span class="number">-1</span>].split(<span class="string">'.'</span>)[<span class="number">0</span>]</span><br><span class="line">        <span class="comment"># for index,src in enumerate(srcs):</span></span><br><span class="line">        path = <span class="string">'%s/%s.ico'</span> % (title,src)</span><br><span class="line">        <span class="keyword">return</span> path</span><br></pre></td></tr></table></figure>
-<ol>
-<li>settings.py文件内容为： </li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ROBOTSTXT_OBEY = <span class="keyword">False</span></span><br><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">   <span class="string">'zhanzhangsucai.pipelines.IconPipeline'</span>: <span class="number">1</span>,</span><br><span class="line">&#125;</span><br><span class="line">IMAGES_STORE = <span class="string">'../imgs'</span></span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> 在spiders文件下新建main.py文件，添加内容为： </span><br><span class="line"></span><br><span class="line">```python </span><br><span class="line"><span class="keyword">from</span> scrapy <span class="keyword">import</span> cmdline</span><br><span class="line"></span><br><span class="line">cmdline.execute(<span class="string">'scrapy crawl chinaz'</span>.split())</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>settings.py文件内容为：</strong> </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ROBOTSTXT_OBEY = <span class="keyword">False</span></span><br><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">   <span class="string">'zhanzhangsucai.pipelines.IconPipeline'</span>: <span class="number">1</span>,</span><br><span class="line">&#125;</span><br><span class="line">IMAGES_STORE = <span class="string">'../imgs'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>在spiders文件下新建main.py文件，添加内容为：</strong> </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scrapy <span class="keyword">import</span> cmdline</span><br><span class="line"></span><br><span class="line">cmdline.execute(<span class="string">'scrapy crawl chinaz'</span>.split())</span><br></pre></td></tr></table></figure>
 
 		
       
