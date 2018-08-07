@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="llt">
 <meta property="og:description" content="最近学习发现，xpath获取文本内容有一定的局限性，以百度贴吧为例说明 123456789101112import requestsfrom lxml import etreeurl = &quot;https://tieba.baidu.com/p/5815118868&quot;headers = &amp;#123;    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 6.1; WO">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://acczmt.top/img/Bing_1280/38997/21.jpg">
+<meta property="og:image" content="http://acczmt.top/img/Bing_1280/38997/20.jpg">
 <meta property="og:image" content="http://acczmt.top/img/tieba.jpg">
-<meta property="og:updated_time" content="2018-08-07T00:49:25.909Z">
+<meta property="og:updated_time" content="2018-08-07T00:52:29.666Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xpath">
 <meta name="twitter:description" content="最近学习发现，xpath获取文本内容有一定的局限性，以百度贴吧为例说明 123456789101112import requestsfrom lxml import etreeurl = &quot;https://tieba.baidu.com/p/5815118868&quot;headers = &amp;#123;    &quot;User-Agent&quot;: &quot;Mozilla/5.0 (Windows NT 6.1; WO">
-<meta name="twitter:image" content="http://acczmt.top/img/Bing_1280/38997/21.jpg">
+<meta name="twitter:image" content="http://acczmt.top/img/Bing_1280/38997/20.jpg">
   
     <link rel="alternative" href="/atom.xml" title="llt" type="application/atom+xml">
   
@@ -178,7 +178,7 @@
       
 	  
   	
-        <div align="center"><br><img src="/img/Bing_1280/38997/21.jpg" height="600"><br></div>
+        <div align="center"><br><img src="/img/Bing_1280/38997/20.jpg" height="600"><br></div>
 
 <p>最近学习发现，xpath获取文本内容有一定的局限性，以百度贴吧为例说明</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> lxml <span class="keyword">import</span> etree</span><br><span class="line"></span><br><span class="line">url = <span class="string">"https://tieba.baidu.com/p/5815118868"</span></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"</span>,</span><br><span class="line">&#125;</span><br><span class="line">response = requests.get(url,headers=headers)</span><br><span class="line">code = etree.HTML(response.text)</span><br><span class="line">contents = code.xpath(<span class="string">'//cc/div[@class="d_post_content j_d_post_content "]/text()'</span>)</span><br><span class="line">print(contents)</span><br></pre></td></tr></table></figure>
@@ -312,8 +312,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2018/08/02/selenium基础用法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">selenium基础用法</div>
+    <a href="/2018/08/02/selenium获取美食杰信息/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">selenium获取美食杰信息</div>
       <i class="icon-circle-right"></i>
     </a>
   
