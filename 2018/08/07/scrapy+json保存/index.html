@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://acczmt.top/img/Bing_1280/38997/18.jpg">
 <meta property="og:image" content="http://acczmt.top/img/sucai/json验证.jpg">
-<meta property="og:updated_time" content="2018-08-07T15:01:30.328Z">
+<meta property="og:updated_time" content="2018-08-08T00:42:59.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="scrapy + json保存">
 <meta name="twitter:description" content="* 本篇博客目的：练习使用scrapy，并将获取的信息存储为json格式，以获取红袖小说为例  在命令行新建一个项目    123scrapy startproject hongxiucd hongxiuscrapy genspider novel www.hongxiu.com  打开编辑器修改items.py文件内容为：   12345678910111213import scrapycl">
@@ -212,7 +212,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scrapy <span class="keyword">import</span> cmdline</span><br><span class="line"></span><br><span class="line">cmdline.execute(<span class="string">'scrapy crawl novel'</span>.split())</span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>最后右键运行main.py文件即可,运行结束之后会生成一个book.json文件</strong></li>
-<li>**验证是否为json文件，将book.json文件拖入火狐浏览器查看，如下所示即为成功<br><img src="/img/sucai/json验证.jpg" alt="json验证"></li>
+<li><strong>验证是否为json文件，将book.json文件拖入火狐浏览器查看，如下所示即为成功</strong><br><img src="/img/sucai/json验证.jpg" alt="json验证"></li>
 </ul>
 
 		
