@@ -17,7 +17,7 @@
 <meta property="og:description" content="Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：  字符串(string) 哈希(hash) 列表(list) 集合(set) 有序集合(zset)  Redis 基本命令  字符串   Redis的字符串(string)可以存储字符串、整数、浮点数。Stri">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://acczmt.top/img/Bing_1280/38997/14.jpg">
-<meta property="og:updated_time" content="2018-08-14T12:55:32.879Z">
+<meta property="og:updated_time" content="2018-08-14T12:59:16.017Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis基本命令">
 <meta name="twitter:description" content="Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：  字符串(string) 哈希(hash) 列表(list) 集合(set) 有序集合(zset)  Redis 基本命令  字符串   Redis的字符串(string)可以存储字符串、整数、浮点数。Stri">
@@ -199,7 +199,61 @@
 <li>字符串</li>
 </ul>
 </blockquote>
-<p>Redis的字符串(string)可以存储字符串、整数、浮点数。String命令及描述如下表所示：<br>|String命令                    |       描 述<br>| :——:                        | :——:|<br>| set key value                 |    设置字符串key的值 |<br>| get key                       |    获取字符串key的值 |<br>| del key                       |    删除key |<br>| strlen key                    |    获取值长度 |<br>| mset key1 value1 key2 value2…  |    设置多个值 |<br>| mget key1 key2…                |    获取多个值 |<br>| append key value              |    追加值 |<br>| incr key                      |    将key对应的值加一 |<br>| decr key                      |    将key对应的值减一 |<br>| incrby key intnum             |    将key对应的值加整数 |<br>| decrby key intnum             |    将key对应的值减整数 |</p>
+<p>Redis的字符串(string)可以存储字符串、整数、浮点数。String命令及描述如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">String命令</th>
+<th style="text-align:center">描 述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">set key value</td>
+<td style="text-align:center">设置字符串key的值</td>
+</tr>
+<tr>
+<td style="text-align:center">get key</td>
+<td style="text-align:center">获取字符串key的值</td>
+</tr>
+<tr>
+<td style="text-align:center">del key</td>
+<td style="text-align:center">删除key</td>
+</tr>
+<tr>
+<td style="text-align:center">strlen key</td>
+<td style="text-align:center">获取值长度</td>
+</tr>
+<tr>
+<td style="text-align:center">mset key1 value1 key2 value2…</td>
+<td style="text-align:center">设置多个值</td>
+</tr>
+<tr>
+<td style="text-align:center">mget key1 key2…</td>
+<td style="text-align:center">获取多个值</td>
+</tr>
+<tr>
+<td style="text-align:center">append key value</td>
+<td style="text-align:center">追加值</td>
+</tr>
+<tr>
+<td style="text-align:center">incr key</td>
+<td style="text-align:center">将key对应的值加一</td>
+</tr>
+<tr>
+<td style="text-align:center">decr key</td>
+<td style="text-align:center">将key对应的值减一</td>
+</tr>
+<tr>
+<td style="text-align:center">incrby key intnum</td>
+<td style="text-align:center">将key对应的值加整数</td>
+</tr>
+<tr>
+<td style="text-align:center">decrby key intnum</td>
+<td style="text-align:center">将key对应的值减整数</td>
+</tr>
+</tbody>
+</table>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; mset age 30 sex man</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; mget age sex</span><br><span class="line">1) <span class="string">"30"</span></span><br><span class="line">2) <span class="string">"man"</span></span><br><span class="line">127.0.0.1:6379&gt; append name lisi</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; get name</span><br><span class="line"><span class="string">"lisi"</span></span><br><span class="line">127.0.0.1:6379&gt; strlen name</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; incr age</span><br><span class="line">(<span class="built_in">integer</span>) 31</span><br><span class="line">127.0.0.1:6379&gt; incrby age 10</span><br><span class="line">(<span class="built_in">integer</span>) 41</span><br><span class="line">127.0.0.1:6379&gt; decr age</span><br><span class="line">(<span class="built_in">integer</span>) 40</span><br><span class="line">127.0.0.1:6379&gt; decrby age 20</span><br><span class="line">(<span class="built_in">integer</span>) 20</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
@@ -210,39 +264,120 @@
 <blockquote>
 <p>索引值从0开始 ，可以为负数</p>
 </blockquote>
-<pre><code>List命令                            |       描 述
-------                              |     ------
-lpush key1 value1 value2 ...           |    在列表key左端插入一个或者多个值
-rpush key1 value1 value2 ...           |    在列表key又端插入一个或者多个值
-linsert key before|after pivot value|    在一个元素的前|后插入新的元素
-lset key index value                |    设置指定索引的元素值
-lpop key                            |    在列表key左端弹出一个值
-rpop key                            |    在列表key右端弹出一个值
-llen key                            |    获取列表key的长度
-lindex key index                    |    获取列表key中index位置的值
-lrange key start end                |   获取列表key中位置在[start,end]范围的值
-ltrim key start end                 |   裁剪列表，改为元集合的一个子集
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; lpush fond study game sing</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; lrange fond 0 -1</span><br><span class="line">1) <span class="string">"sing"</span></span><br><span class="line">2) <span class="string">"game"</span></span><br><span class="line">3) <span class="string">"study"</span></span><br><span class="line">127.0.0.1:6379&gt; rpush friends Jane Jack</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; linsert friends after Jack kangkang</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; lrange friends 0 -1</span><br><span class="line">1) <span class="string">"Jane"</span></span><br><span class="line">2) <span class="string">"Jack"</span></span><br><span class="line">3) <span class="string">"kangkang"</span></span><br><span class="line">127.0.0.1:6379&gt; lset fond 2 swim</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; lpop fond</span><br><span class="line"><span class="string">"sing"</span></span><br><span class="line">127.0.0.1:6379&gt; rpop friends</span><br><span class="line"><span class="string">"kangkang"</span></span><br><span class="line">127.0.0.1:6379&gt; lrange fond 0 -1</span><br><span class="line">1) <span class="string">"game"</span></span><br><span class="line">2) <span class="string">"swim"</span></span><br><span class="line">127.0.0.1:6379&gt; llen fond</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; lindex fond 0</span><br><span class="line"><span class="string">"game"</span></span><br><span class="line">127.0.0.1:6379&gt; ltrim friends 0 2</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; lrange friends 0 -1</span><br><span class="line">1) <span class="string">"Jane"</span></span><br><span class="line">2) <span class="string">"Jack"</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>List命令</th>
+<th>描 述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lpush key1 value1 value2 …</td>
+<td>在列表key左端插入一个或者多个值</td>
+</tr>
+<tr>
+<td>rpush key1 value1 value2 …</td>
+<td>在列表key又端插入一个或者多个值</td>
+</tr>
+<tr>
+<td>linsert key before</td>
+<td>after pivot value</td>
+<td>在一个元素的前</td>
+<td>后插入新的元素</td>
+</tr>
+<tr>
+<td>lset key index value</td>
+<td>设置指定索引的元素值</td>
+</tr>
+<tr>
+<td>lpop key</td>
+<td>在列表key左端弹出一个值</td>
+</tr>
+<tr>
+<td>rpop key</td>
+<td>在列表key右端弹出一个值</td>
+</tr>
+<tr>
+<td>llen key</td>
+<td>获取列表key的长度</td>
+</tr>
+<tr>
+<td>lindex key index</td>
+<td>获取列表key中index位置的值</td>
+</tr>
+<tr>
+<td>lrange key start end</td>
+<td>获取列表key中位置在[start,end]范围的值</td>
+</tr>
+<tr>
+<td>ltrim key start end</td>
+<td>裁剪列表，改为元集合的一个子集</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; lpush fond study game sing</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; lrange fond 0 -1</span><br><span class="line">1) <span class="string">"sing"</span></span><br><span class="line">2) <span class="string">"game"</span></span><br><span class="line">3) <span class="string">"study"</span></span><br><span class="line">127.0.0.1:6379&gt; rpush friends Jane Jack</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; linsert friends after Jack kangkang</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; lrange friends 0 -1</span><br><span class="line">1) <span class="string">"Jane"</span></span><br><span class="line">2) <span class="string">"Jack"</span></span><br><span class="line">3) <span class="string">"kangkang"</span></span><br><span class="line">127.0.0.1:6379&gt; lset fond 2 swim</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; lpop fond</span><br><span class="line"><span class="string">"sing"</span></span><br><span class="line">127.0.0.1:6379&gt; rpop friends</span><br><span class="line"><span class="string">"kangkang"</span></span><br><span class="line">127.0.0.1:6379&gt; lrange fond 0 -1</span><br><span class="line">1) <span class="string">"game"</span></span><br><span class="line">2) <span class="string">"swim"</span></span><br><span class="line">127.0.0.1:6379&gt; llen fond</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; lindex fond 0</span><br><span class="line"><span class="string">"game"</span></span><br><span class="line">127.0.0.1:6379&gt; ltrim friends 0 2</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; lrange friends 0 -1</span><br><span class="line">1) <span class="string">"Jane"</span></span><br><span class="line">2) <span class="string">"Jack"</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
 <li>哈希</li>
 </ul>
 </blockquote>
 <p>Redis的哈希(Hash)可以存储多个键值对，其中的键和值都是字符串。Hash命令及描述如下表所示：</p>
-<pre><code>Hash命令                 |       描述
-------                      |        ------
-hset key field value        |   将哈希key的field字段赋值为value
-hmset key field1 value1 field2 value2...   | 设置多个值
-hdel key field1 field2...      |   删除哈希key的一个或多个字段
-hget key field              |   获取哈希key的field字段的值
-hmget key field1 field2...     |   获取多个属性的值
-hgetall key                 |   获取哈希key的所有字段和值
-hkeys key                   |   获取所有属性
-hvals key                   |   获取所有值
-hlen  key                   |   返回包含数据的个数
-hexists key field           |   判断属性是否存在，存在返回1，不存在返回0
-hstrlen key field           |   返回值的字符串长度
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hset point x 10</span><br><span class="line">(<span class="built_in">integer</span>) 1</span><br><span class="line">127.0.0.1:6379&gt; hmset point y 20</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; hget point y</span><br><span class="line"><span class="string">"20"</span></span><br><span class="line">127.0.0.1:6379&gt; hmget point</span><br><span class="line">(error) ERR wrong number of argu</span><br><span class="line">127.0.0.1:6379&gt; hmget point x z</span><br><span class="line">1) <span class="string">"10"</span></span><br><span class="line">2) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hgetall point</span><br><span class="line">1) <span class="string">"x"</span></span><br><span class="line">2) <span class="string">"10"</span></span><br><span class="line">3) <span class="string">"y"</span></span><br><span class="line">4) <span class="string">"20"</span></span><br><span class="line">5) <span class="string">"z"</span></span><br><span class="line">6) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hkeys point</span><br><span class="line">1) <span class="string">"x"</span></span><br><span class="line">2) <span class="string">"y"</span></span><br><span class="line">3) <span class="string">"z"</span></span><br><span class="line">127.0.0.1:6379&gt; hvals point</span><br><span class="line">1) <span class="string">"10"</span></span><br><span class="line">2) <span class="string">"20"</span></span><br><span class="line">3) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hlen point</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; hexists point w</span><br><span class="line">(<span class="built_in">integer</span>) 0</span><br><span class="line">127.0.0.1:6379&gt; hstrlen point x</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; hdel point x y z</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Hash命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hset key field value</td>
+<td>将哈希key的field字段赋值为value</td>
+</tr>
+<tr>
+<td>hmset key field1 value1 field2 value2…</td>
+<td>设置多个值</td>
+</tr>
+<tr>
+<td>hdel key field1 field2…</td>
+<td>删除哈希key的一个或多个字段</td>
+</tr>
+<tr>
+<td>hget key field</td>
+<td>获取哈希key的field字段的值</td>
+</tr>
+<tr>
+<td>hmget key field1 field2…</td>
+<td>获取多个属性的值</td>
+</tr>
+<tr>
+<td>hgetall key</td>
+<td>获取哈希key的所有字段和值</td>
+</tr>
+<tr>
+<td>hkeys key</td>
+<td>获取所有属性</td>
+</tr>
+<tr>
+<td>hvals key</td>
+<td>获取所有值</td>
+</tr>
+<tr>
+<td>hlen  key</td>
+<td>返回包含数据的个数</td>
+</tr>
+<tr>
+<td>hexists key field</td>
+<td>判断属性是否存在，存在返回1，不存在返回0</td>
+</tr>
+<tr>
+<td>hstrlen key field</td>
+<td>返回值的字符串长度</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hset point x 10</span><br><span class="line">(<span class="built_in">integer</span>) 1</span><br><span class="line">127.0.0.1:6379&gt; hmset point y 20</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; hget point y</span><br><span class="line"><span class="string">"20"</span></span><br><span class="line">127.0.0.1:6379&gt; hmget point</span><br><span class="line">(error) ERR wrong number of argu</span><br><span class="line">127.0.0.1:6379&gt; hmget point x z</span><br><span class="line">1) <span class="string">"10"</span></span><br><span class="line">2) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hgetall point</span><br><span class="line">1) <span class="string">"x"</span></span><br><span class="line">2) <span class="string">"10"</span></span><br><span class="line">3) <span class="string">"y"</span></span><br><span class="line">4) <span class="string">"20"</span></span><br><span class="line">5) <span class="string">"z"</span></span><br><span class="line">6) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hkeys point</span><br><span class="line">1) <span class="string">"x"</span></span><br><span class="line">2) <span class="string">"y"</span></span><br><span class="line">3) <span class="string">"z"</span></span><br><span class="line">127.0.0.1:6379&gt; hvals point</span><br><span class="line">1) <span class="string">"10"</span></span><br><span class="line">2) <span class="string">"20"</span></span><br><span class="line">3) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hlen point</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; hexists point w</span><br><span class="line">(<span class="built_in">integer</span>) 0</span><br><span class="line">127.0.0.1:6379&gt; hstrlen point x</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; hdel point x y z</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
 <li>集合</li>
