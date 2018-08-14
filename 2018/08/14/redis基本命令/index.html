@@ -17,7 +17,7 @@
 <meta property="og:description" content="Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：  字符串(string) 哈希(hash) 列表(list) 集合(set) 有序集合(zset)  Redis 基本命令  字符串   Redis的字符串(string)可以存储字符串、整数、浮点数。Stri">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://acczmt.top/img/Bing_1280/38997/14.jpg">
-<meta property="og:updated_time" content="2018-08-14T12:59:16.017Z">
+<meta property="og:updated_time" content="2018-08-14T13:04:15.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis基本命令">
 <meta name="twitter:description" content="Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：  字符串(string) 哈希(hash) 列表(list) 集合(set) 有序集合(zset)  Redis 基本命令  字符串   Redis的字符串(string)可以存储字符串、整数、浮点数。Stri">
@@ -203,54 +203,54 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">String命令</th>
-<th style="text-align:center">描 述</th>
+<th>String命令</th>
+<th>描 述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">set key value</td>
-<td style="text-align:center">设置字符串key的值</td>
+<td>set key value</td>
+<td>设置字符串key的值</td>
 </tr>
 <tr>
-<td style="text-align:center">get key</td>
-<td style="text-align:center">获取字符串key的值</td>
+<td>get key</td>
+<td>获取字符串key的值</td>
 </tr>
 <tr>
-<td style="text-align:center">del key</td>
-<td style="text-align:center">删除key</td>
+<td>del key</td>
+<td>删除key</td>
 </tr>
 <tr>
-<td style="text-align:center">strlen key</td>
-<td style="text-align:center">获取值长度</td>
+<td>strlen key</td>
+<td>获取值长度</td>
 </tr>
 <tr>
-<td style="text-align:center">mset key1 value1 key2 value2…</td>
-<td style="text-align:center">设置多个值</td>
+<td>mset key1 value1 key2 value2…</td>
+<td>设置多个值</td>
 </tr>
 <tr>
-<td style="text-align:center">mget key1 key2…</td>
-<td style="text-align:center">获取多个值</td>
+<td>mget key1 key2…</td>
+<td>获取多个值</td>
 </tr>
 <tr>
-<td style="text-align:center">append key value</td>
-<td style="text-align:center">追加值</td>
+<td>append key value</td>
+<td>追加值</td>
 </tr>
 <tr>
-<td style="text-align:center">incr key</td>
-<td style="text-align:center">将key对应的值加一</td>
+<td>incr key</td>
+<td>将key对应的值加一</td>
 </tr>
 <tr>
-<td style="text-align:center">decr key</td>
-<td style="text-align:center">将key对应的值减一</td>
+<td>decr key</td>
+<td>将key对应的值减一</td>
 </tr>
 <tr>
-<td style="text-align:center">incrby key intnum</td>
-<td style="text-align:center">将key对应的值加整数</td>
+<td>incrby key intnum</td>
+<td>将key对应的值加整数</td>
 </tr>
 <tr>
-<td style="text-align:center">decrby key intnum</td>
-<td style="text-align:center">将key对应的值减整数</td>
+<td>decrby key intnum</td>
+<td>将key对应的值减整数</td>
 </tr>
 </tbody>
 </table>
@@ -384,47 +384,134 @@
 </ul>
 </blockquote>
 <p>Redis中的集合(set)可以存储多个唯一的字符串。set命令及描述如下表所示：</p>
-<pre><code>    set命令                   |          描 述
-------                    |         ------
-sadd key member1 member2...  |     向集合key中添加一个或多个成员
-srem key member1 member2...  |   删除集合key中一个或者多个成员
-smembers key                 |   获取集合key中所有成员
-scard key                    |   获取集合key中成员数量
-sismember key menber         |   判断member是否是集合key的成员
-sinter key1 key2...          |   求多个集合的交集
-sdiff  key1 key2...          |   求多个集合的差集
-sunion key1 key2...          |   求多个集合的合集
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; sadd color red black blue whi</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; smembers color</span><br><span class="line">1) <span class="string">"black"</span></span><br><span class="line">2) <span class="string">"white"</span></span><br><span class="line">3) <span class="string">"blue"</span></span><br><span class="line">4) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; scard color</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; sismember color yellow</span><br><span class="line">(<span class="built_in">integer</span>) 0</span><br><span class="line">127.0.0.1:6379&gt; sadd colors red blue yellow p</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; sinter color colors</span><br><span class="line">1) <span class="string">"blue"</span></span><br><span class="line">2) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; sdiff color colors</span><br><span class="line">1) <span class="string">"black"</span></span><br><span class="line">2) <span class="string">"white"</span></span><br><span class="line">127.0.0.1:6379&gt; sunion color colors</span><br><span class="line">1) <span class="string">"yellow"</span></span><br><span class="line">2) <span class="string">"black"</span></span><br><span class="line">3) <span class="string">"pink"</span></span><br><span class="line">4) <span class="string">"white"</span></span><br><span class="line">5) <span class="string">"blue"</span></span><br><span class="line">6) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; srem color red black</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>set命令</th>
+<th>描 述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sadd key member1 member2…</td>
+<td>向集合key中添加一个或多个成员</td>
+</tr>
+<tr>
+<td>srem key member1 member2…</td>
+<td>删除集合key中一个或者多个成员</td>
+</tr>
+<tr>
+<td>smembers key</td>
+<td>获取集合key中所有成员</td>
+</tr>
+<tr>
+<td>scard key</td>
+<td>获取集合key中成员数量</td>
+</tr>
+<tr>
+<td>sismember key menber</td>
+<td>判断member是否是集合key的成员</td>
+</tr>
+<tr>
+<td>sinter key1 key2…</td>
+<td>求多个集合的交集</td>
+</tr>
+<tr>
+<td>sdiff  key1 key2…</td>
+<td>求多个集合的差集</td>
+</tr>
+<tr>
+<td>sunion key1 key2…</td>
+<td>求多个集合的合集</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; sadd color red black blue whi</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; smembers color</span><br><span class="line">1) <span class="string">"black"</span></span><br><span class="line">2) <span class="string">"white"</span></span><br><span class="line">3) <span class="string">"blue"</span></span><br><span class="line">4) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; scard color</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; sismember color yellow</span><br><span class="line">(<span class="built_in">integer</span>) 0</span><br><span class="line">127.0.0.1:6379&gt; sadd colors red blue yellow p</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; sinter color colors</span><br><span class="line">1) <span class="string">"blue"</span></span><br><span class="line">2) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; sdiff color colors</span><br><span class="line">1) <span class="string">"black"</span></span><br><span class="line">2) <span class="string">"white"</span></span><br><span class="line">127.0.0.1:6379&gt; sunion color colors</span><br><span class="line">1) <span class="string">"yellow"</span></span><br><span class="line">2) <span class="string">"black"</span></span><br><span class="line">3) <span class="string">"pink"</span></span><br><span class="line">4) <span class="string">"white"</span></span><br><span class="line">5) <span class="string">"blue"</span></span><br><span class="line">6) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; srem color red black</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
 <li>有序集合</li>
 </ul>
 </blockquote>
 <p>Redis中的有序集合(ZSet)与集合(Set)类似，可以存储多个唯一的字符串，但在有序集合中，每个成员都有一个分数，所有成员按给定分数在集合中有序排列。Zset命令及描述如下图所示：</p>
-<pre><code>Zset命令                    |       描 述
-------                      |         ------
-zadd key score1 member1 score2 member2...|   向有序集合key中添加一个或多个成员
-zrem key member member2 ...      | 删除有序集合key中一个或多个成员
-zrange key start stop  |  获取有序集合key中位置在[start,end]范围的所有成员
-zrangebyscore key min max | 获取有序集合key中分值在[min,max]范围的所有成员
-zcount key key min max | 获取有序集合key中分值在[min,max]范围的个数
-zcard key | 返回元素的个数
-zscore key member | 返回有序集合key中，成员member的分值
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zadd country 1 China 2 Russia 3 India 4 France</span><br><span class="line">(<span class="built_in">integer</span>) 5</span><br><span class="line">127.0.0.1:6379&gt; zrange country 0 -1</span><br><span class="line">1) <span class="string">"China"</span></span><br><span class="line">2) <span class="string">"Russia"</span></span><br><span class="line">3) <span class="string">"India"</span></span><br><span class="line">4) <span class="string">"France"</span></span><br><span class="line">5) <span class="string">"Italy"</span></span><br><span class="line">127.0.0.1:6379&gt; zrangebyscore country 1 3</span><br><span class="line">1) <span class="string">"China"</span></span><br><span class="line">2) <span class="string">"Russia"</span></span><br><span class="line">3) <span class="string">"India"</span></span><br><span class="line">127.0.0.1:6379&gt; zcount country 1 4</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; zcard country</span><br><span class="line">(<span class="built_in">integer</span>) 5</span><br><span class="line">127.0.0.1:6379&gt; zscore country China</span><br><span class="line"><span class="string">"1"</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Zset命令</th>
+<th>描 述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>zadd key score1 member1 score2 member2…</td>
+<td>向有序集合key中添加一个或多个成员</td>
+</tr>
+<tr>
+<td>zrem key member member2 …</td>
+<td>删除有序集合key中一个或多个成员</td>
+</tr>
+<tr>
+<td>zrange key start stop</td>
+<td>获取有序集合key中位置在[start,end]范围的所有成员</td>
+</tr>
+<tr>
+<td>zrangebyscore key min max</td>
+<td>获取有序集合key中分值在[min,max]范围的所有成员</td>
+</tr>
+<tr>
+<td>zcount key key min max</td>
+<td>获取有序集合key中分值在[min,max]范围的个数</td>
+</tr>
+<tr>
+<td>zcard key</td>
+<td>返回元素的个数</td>
+</tr>
+<tr>
+<td>zscore key member</td>
+<td>返回有序集合key中，成员member的分值</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zadd country 1 China 2 Russia 3 India 4 France</span><br><span class="line">(<span class="built_in">integer</span>) 5</span><br><span class="line">127.0.0.1:6379&gt; zrange country 0 -1</span><br><span class="line">1) <span class="string">"China"</span></span><br><span class="line">2) <span class="string">"Russia"</span></span><br><span class="line">3) <span class="string">"India"</span></span><br><span class="line">4) <span class="string">"France"</span></span><br><span class="line">5) <span class="string">"Italy"</span></span><br><span class="line">127.0.0.1:6379&gt; zrangebyscore country 1 3</span><br><span class="line">1) <span class="string">"China"</span></span><br><span class="line">2) <span class="string">"Russia"</span></span><br><span class="line">3) <span class="string">"India"</span></span><br><span class="line">127.0.0.1:6379&gt; zcount country 1 4</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; zcard country</span><br><span class="line">(<span class="built_in">integer</span>) 5</span><br><span class="line">127.0.0.1:6379&gt; zscore country China</span><br><span class="line"><span class="string">"1"</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
 <li>key</li>
 </ul>
 </blockquote>
-<pre><code>key命令               |       描 述
-------                |       ------
-keys pattern        |       查找键，参数支持正则
-exists key               |    判断键是否存在，如果存在返回1，不存在返回0
-type key        |  查看键及对应的值
-del key1 key2 ... | 删除键及对应的值
-expire key seconds | 设置过期时间，以秒为单位
-ttl key         | 查看有效时间，以秒为单位
-</code></pre><blockquote>
+<table>
+<thead>
+<tr>
+<th>key命令</th>
+<th>描 述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keys pattern</td>
+<td>查找键，参数支持正则</td>
+</tr>
+<tr>
+<td>exists key</td>
+<td>判断键是否存在，如果存在返回1，不存在返回0</td>
+</tr>
+<tr>
+<td>type key</td>
+<td>查看键及对应的值</td>
+</tr>
+<tr>
+<td>del key1 key2 …</td>
+<td>删除键及对应的值</td>
+</tr>
+<tr>
+<td>expire key seconds</td>
+<td>设置过期时间，以秒为单位</td>
+</tr>
+<tr>
+<td>ttl key</td>
+<td>查看有效时间，以秒为单位</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
 <ul>
 <li>更多命令请参考官网 <a href="https://redis.io" target="_blank" rel="noopener">https://redis.io</a></li>
 </ul>
