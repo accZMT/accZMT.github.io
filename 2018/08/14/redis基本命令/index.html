@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://acczmt.top">
-  <title>Archives: 2018 | llt</title>
+  <title>Redis基本命令 | llt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="只想挽起你的手 戎马一生挥毫只为你">
-<meta property="og:type" content="website">
-<meta property="og:title" content="llt">
-<meta property="og:url" content="https://acczmt.top/archives/2018/index.html">
+  <meta name="description" content="Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：  字符串(string) 哈希(hash) 列表(list) 集合(set) 有序集合(zset)  Redis 基本命令  字符串   Redis的字符串(string)可以存储字符串、整数、浮点数。Stri">
+<meta name="keywords" content="redis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis基本命令">
+<meta property="og:url" content="https://acczmt.top/2018/08/14/redis基本命令/index.html">
 <meta property="og:site_name" content="llt">
-<meta property="og:description" content="只想挽起你的手 戎马一生挥毫只为你">
+<meta property="og:description" content="Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：  字符串(string) 哈希(hash) 列表(list) 集合(set) 有序集合(zset)  Redis 基本命令  字符串   Redis的字符串(string)可以存储字符串、整数、浮点数。Stri">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://acczmt.top/img/Bing_1280/38997/14.jpg">
+<meta property="og:updated_time" content="2018-08-14T12:47:45.682Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="llt">
-<meta name="twitter:description" content="只想挽起你的手 戎马一生挥毫只为你">
+<meta name="twitter:title" content="Redis基本命令">
+<meta name="twitter:description" content="Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：  字符串(string) 哈希(hash) 列表(list) 集合(set) 有序集合(zset)  Redis 基本命令  字符串   Redis的字符串(string)可以存储字符串、整数、浮点数。Stri">
+<meta name="twitter:image" content="https://acczmt.top/img/Bing_1280/38997/14.jpg">
   
     <link rel="alternative" href="/atom.xml" title="llt" type="application/atom+xml">
   
@@ -152,36 +156,184 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-redis基本命令" class="article article-type-post " itemscope itemprop="blogPost">
+
+	
+ 
+  <div class="article-inner">
+ 		 
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/14/redis基本命令/" class="archive-article-date">
-  	<time datetime="2018-08-14T09:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/14/redis基本命令/">Redis基本命令</a>
+    <h1 class="article-title" itemprop="name">
+      Redis基本命令
     </h1>
   
+		    
+        
+        <a href="/2018/08/14/redis基本命令/" class="archive-article-date">
+  	<time datetime="2018-08-14T09:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+	
+      
+	  
+  	
+        <div align="center"><br><img src="/img/Bing_1280/38997/14.jpg" height="600"><br></div>
 
-        <div class="article-info info-on-right">
-          
+
+<p>Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：</p>
+<ul>
+<li>字符串(string)</li>
+<li>哈希(hash)</li>
+<li>列表(list)</li>
+<li>集合(set)</li>
+<li>有序集合(zset)</li>
+</ul>
+<h3 id="Redis-基本命令"><a href="#Redis-基本命令" class="headerlink" title="Redis 基本命令"></a>Redis 基本命令</h3><blockquote>
+<ul>
+<li>字符串</li>
+</ul>
+</blockquote>
+<p>Redis的字符串(string)可以存储字符串、整数、浮点数。String命令及描述如下表所示：<br>        String命令                    |       描 述<br>        ——                        |     ——<br>    set key value                 |    设置字符串key的值<br>    get key                       |    获取字符串key的值<br>    del key                       |    删除key<br>    strlen key                    |    获取值长度<br>    mset key1 value1 key2 value2…  |    设置多个值<br>    mget key1 key2…                |    获取多个值<br>    append key value              |    追加值<br>    incr key                      |    将key对应的值加一<br>    decr key                      |    将key对应的值减一<br>    incrby key intnum             |    将key对应的值加整数<br>    decrby key intnum             |    将key对应的值减整数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; mset age 30 sex man</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; mget age sex</span><br><span class="line">1) <span class="string">"30"</span></span><br><span class="line">2) <span class="string">"man"</span></span><br><span class="line">127.0.0.1:6379&gt; append name lisi</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; get name</span><br><span class="line"><span class="string">"lisi"</span></span><br><span class="line">127.0.0.1:6379&gt; strlen name</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; incr age</span><br><span class="line">(<span class="built_in">integer</span>) 31</span><br><span class="line">127.0.0.1:6379&gt; incrby age 10</span><br><span class="line">(<span class="built_in">integer</span>) 41</span><br><span class="line">127.0.0.1:6379&gt; decr age</span><br><span class="line">(<span class="built_in">integer</span>) 40</span><br><span class="line">127.0.0.1:6379&gt; decrby age 20</span><br><span class="line">(<span class="built_in">integer</span>) 20</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>列表</li>
+</ul>
+</blockquote>
+<p>Redis的列表(list)可以有序地存储多个字符串。List命令及描述如下所示：</p>
+<blockquote>
+<p>索引值从0开始 ，可以为负数</p>
+</blockquote>
+<pre><code>List命令                            |       描 述
+------                              |     ------
+lpush key1 value1 value2 ...           |    在列表key左端插入一个或者多个值
+rpush key1 value1 value2 ...           |    在列表key又端插入一个或者多个值
+linsert key before|after pivot value|    在一个元素的前|后插入新的元素
+lset key index value                |    设置指定索引的元素值
+lpop key                            |    在列表key左端弹出一个值
+rpop key                            |    在列表key右端弹出一个值
+llen key                            |    获取列表key的长度
+lindex key index                    |    获取列表key中index位置的值
+lrange key start end                |   获取列表key中位置在[start,end]范围的值
+ltrim key start end                 |   裁剪列表，改为元集合的一个子集
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; lpush fond study game sing</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; lrange fond 0 -1</span><br><span class="line">1) <span class="string">"sing"</span></span><br><span class="line">2) <span class="string">"game"</span></span><br><span class="line">3) <span class="string">"study"</span></span><br><span class="line">127.0.0.1:6379&gt; rpush friends Jane Jack</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; linsert friends after Jack kangkang</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; lrange friends 0 -1</span><br><span class="line">1) <span class="string">"Jane"</span></span><br><span class="line">2) <span class="string">"Jack"</span></span><br><span class="line">3) <span class="string">"kangkang"</span></span><br><span class="line">127.0.0.1:6379&gt; lset fond 2 swim</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; lpop fond</span><br><span class="line"><span class="string">"sing"</span></span><br><span class="line">127.0.0.1:6379&gt; rpop friends</span><br><span class="line"><span class="string">"kangkang"</span></span><br><span class="line">127.0.0.1:6379&gt; lrange fond 0 -1</span><br><span class="line">1) <span class="string">"game"</span></span><br><span class="line">2) <span class="string">"swim"</span></span><br><span class="line">127.0.0.1:6379&gt; llen fond</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; lindex fond 0</span><br><span class="line"><span class="string">"game"</span></span><br><span class="line">127.0.0.1:6379&gt; ltrim friends 0 2</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; lrange friends 0 -1</span><br><span class="line">1) <span class="string">"Jane"</span></span><br><span class="line">2) <span class="string">"Jack"</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>哈希</li>
+</ul>
+</blockquote>
+<p>Redis的哈希(Hash)可以存储多个键值对，其中的键和值都是字符串。Hash命令及描述如下表所示：</p>
+<pre><code>Hash命令                 |       描述
+------                      |        ------
+hset key field value        |   将哈希key的field字段赋值为value
+hmset key field1 value1 field2 value2...   | 设置多个值
+hdel key field1 field2...      |   删除哈希key的一个或多个字段
+hget key field              |   获取哈希key的field字段的值
+hmget key field1 field2...     |   获取多个属性的值
+hgetall key                 |   获取哈希key的所有字段和值
+hkeys key                   |   获取所有属性
+hvals key                   |   获取所有值
+hlen  key                   |   返回包含数据的个数
+hexists key field           |   判断属性是否存在，存在返回1，不存在返回0
+hstrlen key field           |   返回值的字符串长度
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hset point x 10</span><br><span class="line">(<span class="built_in">integer</span>) 1</span><br><span class="line">127.0.0.1:6379&gt; hmset point y 20</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; hget point y</span><br><span class="line"><span class="string">"20"</span></span><br><span class="line">127.0.0.1:6379&gt; hmget point</span><br><span class="line">(error) ERR wrong number of argu</span><br><span class="line">127.0.0.1:6379&gt; hmget point x z</span><br><span class="line">1) <span class="string">"10"</span></span><br><span class="line">2) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hgetall point</span><br><span class="line">1) <span class="string">"x"</span></span><br><span class="line">2) <span class="string">"10"</span></span><br><span class="line">3) <span class="string">"y"</span></span><br><span class="line">4) <span class="string">"20"</span></span><br><span class="line">5) <span class="string">"z"</span></span><br><span class="line">6) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hkeys point</span><br><span class="line">1) <span class="string">"x"</span></span><br><span class="line">2) <span class="string">"y"</span></span><br><span class="line">3) <span class="string">"z"</span></span><br><span class="line">127.0.0.1:6379&gt; hvals point</span><br><span class="line">1) <span class="string">"10"</span></span><br><span class="line">2) <span class="string">"20"</span></span><br><span class="line">3) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hlen point</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; hexists point w</span><br><span class="line">(<span class="built_in">integer</span>) 0</span><br><span class="line">127.0.0.1:6379&gt; hstrlen point x</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; hdel point x y z</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>集合</li>
+</ul>
+</blockquote>
+<p>Redis中的集合(set)可以存储多个唯一的字符串。set命令及描述如下表所示：</p>
+<pre><code>    set命令                   |          描 述
+------                    |         ------
+sadd key member1 member2...  |     向集合key中添加一个或多个成员
+srem key member1 member2...  |   删除集合key中一个或者多个成员
+smembers key                 |   获取集合key中所有成员
+scard key                    |   获取集合key中成员数量
+sismember key menber         |   判断member是否是集合key的成员
+sinter key1 key2...          |   求多个集合的交集
+sdiff  key1 key2...          |   求多个集合的差集
+sunion key1 key2...          |   求多个集合的合集
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; sadd color red black blue whi</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; smembers color</span><br><span class="line">1) <span class="string">"black"</span></span><br><span class="line">2) <span class="string">"white"</span></span><br><span class="line">3) <span class="string">"blue"</span></span><br><span class="line">4) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; scard color</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; sismember color yellow</span><br><span class="line">(<span class="built_in">integer</span>) 0</span><br><span class="line">127.0.0.1:6379&gt; sadd colors red blue yellow p</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; sinter color colors</span><br><span class="line">1) <span class="string">"blue"</span></span><br><span class="line">2) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; sdiff color colors</span><br><span class="line">1) <span class="string">"black"</span></span><br><span class="line">2) <span class="string">"white"</span></span><br><span class="line">127.0.0.1:6379&gt; sunion color colors</span><br><span class="line">1) <span class="string">"yellow"</span></span><br><span class="line">2) <span class="string">"black"</span></span><br><span class="line">3) <span class="string">"pink"</span></span><br><span class="line">4) <span class="string">"white"</span></span><br><span class="line">5) <span class="string">"blue"</span></span><br><span class="line">6) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; srem color red black</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>有序集合</li>
+</ul>
+</blockquote>
+<p>Redis中的有序集合(ZSet)与集合(Set)类似，可以存储多个唯一的字符串，但在有序集合中，每个成员都有一个分数，所有成员按给定分数在集合中有序排列。Zset命令及描述如下图所示：</p>
+<pre><code>Zset命令                    |       描 述
+------                      |         ------
+zadd key score1 member1 score2 member2...|   向有序集合key中添加一个或多个成员
+zrem key member member2 ...      | 删除有序集合key中一个或多个成员
+zrange key start stop  |  获取有序集合key中位置在[start,end]范围的所有成员
+zrangebyscore key min max | 获取有序集合key中分值在[min,max]范围的所有成员
+zcount key key min max | 获取有序集合key中分值在[min,max]范围的个数
+zcard key | 返回元素的个数
+zscore key member | 返回有序集合key中，成员member的分值
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zadd country 1 China 2 Russia 3 India 4 France</span><br><span class="line">(<span class="built_in">integer</span>) 5</span><br><span class="line">127.0.0.1:6379&gt; zrange country 0 -1</span><br><span class="line">1) <span class="string">"China"</span></span><br><span class="line">2) <span class="string">"Russia"</span></span><br><span class="line">3) <span class="string">"India"</span></span><br><span class="line">4) <span class="string">"France"</span></span><br><span class="line">5) <span class="string">"Italy"</span></span><br><span class="line">127.0.0.1:6379&gt; zrangebyscore country 1 3</span><br><span class="line">1) <span class="string">"China"</span></span><br><span class="line">2) <span class="string">"Russia"</span></span><br><span class="line">3) <span class="string">"India"</span></span><br><span class="line">127.0.0.1:6379&gt; zcount country 1 4</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; zcard country</span><br><span class="line">(<span class="built_in">integer</span>) 5</span><br><span class="line">127.0.0.1:6379&gt; zscore country China</span><br><span class="line"><span class="string">"1"</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>key</li>
+</ul>
+</blockquote>
+<pre><code>key命令               |       描 述
+------                |       ------
+keys pattern        |       查找键，参数支持正则
+exists key               |    判断键是否存在，如果存在返回1，不存在返回0
+type key        |  查看键及对应的值
+del key1 key2 ... | 删除键及对应的值
+expire key seconds | 设置过期时间，以秒为单位
+ttl key         | 查看有效时间，以秒为单位
+</code></pre><blockquote>
+<ul>
+<li>更多命令请参考官网 <a href="https://redis.io" target="_blank" rel="noopener">https://redis.io</a></li>
+</ul>
+</blockquote>
+
+		
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,293 +345,125 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://acczmt.top/2018/08/14/redis基本命令/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/13/scrapy爬取jobbole/" class="archive-article-date">
-  	<time datetime="2018-08-13T13:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/13/scrapy爬取jobbole/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">scrapy爬取jobbole</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/13/scrapy爬取jobbole/">scrapy爬取jobbole</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="redis基本命令" data-title="Redis基本命令" data-url="https://acczmt.top/2018/08/14/redis基本命令/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">scrapy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/10/python+smtp发送email/" class="archive-article-date">
-  	<time datetime="2018-08-10T11:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/10/python+smtp发送email/">python+smtp发送email</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">smtp</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">email</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/09/安装mySQL版本5.6/" class="archive-article-date">
-  	<time datetime="2018-08-09T13:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/09/安装mySQL版本5.6/">安装mySQL版本5.6.41.0</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mySQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/08/pymysql存储中文数据出错解决方法/" class="archive-article-date">
-  	<time datetime="2018-08-08T14:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/08/pymysql存储中文数据出错解决方法/">pymysql存储中文数据出错解决方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pymysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/07/scrapy+json保存/" class="archive-article-date">
-  	<time datetime="2018-08-07T14:23:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/07/scrapy+json保存/">scrapy + json保存</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/07/scrapy练习/" class="archive-article-date">
-  	<time datetime="2018-08-07T11:30:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/07/scrapy练习/">scrapy实现下载图片</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">scrapy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/02/selenium获取美食杰信息/" class="archive-article-date">
-  	<time datetime="2018-08-01T20:10:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/02/selenium获取美食杰信息/">selenium获取美食杰信息</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">selenium</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="page-number" href="/archives/2018/page/3/">3</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -507,8 +491,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
