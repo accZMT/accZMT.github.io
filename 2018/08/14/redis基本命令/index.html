@@ -17,7 +17,7 @@
 <meta property="og:description" content="Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：  字符串(string) 哈希(hash) 列表(list) 集合(set) 有序集合(zset)  Redis 基本命令  字符串   Redis的字符串(string)可以存储字符串、整数、浮点数。Stri">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://acczmt.top/img/Bing_1280/38997/14.jpg">
-<meta property="og:updated_time" content="2018-08-14T13:04:15.537Z">
+<meta property="og:updated_time" content="2018-08-14T13:09:52.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis基本命令">
 <meta name="twitter:description" content="Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：  字符串(string) 哈希(hash) 列表(list) 集合(set) 有序集合(zset)  Redis 基本命令  字符串   Redis的字符串(string)可以存储字符串、整数、浮点数。Stri">
@@ -186,7 +186,7 @@
         <div align="center"><br><img src="/img/Bing_1280/38997/14.jpg" height="600"><br></div>
 
 
-<p>Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：</p>
+<p><strong>Redis 是一个速度非常快的非关系型数据库，使用内存作为主存储，内存中的数据也可以被持久化到硬盘。Redis以键值对形式(key-value)存储数据，其中值可以分为以下5中类型：</strong></p>
 <ul>
 <li>字符串(string)</li>
 <li>哈希(hash)</li>
@@ -196,7 +196,7 @@
 </ul>
 <h3 id="Redis-基本命令"><a href="#Redis-基本命令" class="headerlink" title="Redis 基本命令"></a>Redis 基本命令</h3><blockquote>
 <ul>
-<li>字符串</li>
+<li><strong>字符串</strong></li>
 </ul>
 </blockquote>
 <p>Redis的字符串(string)可以存储字符串、整数、浮点数。String命令及描述如下表所示：</p>
@@ -257,7 +257,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; mset age 30 sex man</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; mget age sex</span><br><span class="line">1) <span class="string">"30"</span></span><br><span class="line">2) <span class="string">"man"</span></span><br><span class="line">127.0.0.1:6379&gt; append name lisi</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; get name</span><br><span class="line"><span class="string">"lisi"</span></span><br><span class="line">127.0.0.1:6379&gt; strlen name</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; incr age</span><br><span class="line">(<span class="built_in">integer</span>) 31</span><br><span class="line">127.0.0.1:6379&gt; incrby age 10</span><br><span class="line">(<span class="built_in">integer</span>) 41</span><br><span class="line">127.0.0.1:6379&gt; decr age</span><br><span class="line">(<span class="built_in">integer</span>) 40</span><br><span class="line">127.0.0.1:6379&gt; decrby age 20</span><br><span class="line">(<span class="built_in">integer</span>) 20</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
-<li>列表</li>
+<li><strong>列表</strong></li>
 </ul>
 </blockquote>
 <p>Redis的列表(list)可以有序地存储多个字符串。List命令及描述如下所示：</p>
@@ -281,10 +281,8 @@
 <td>在列表key又端插入一个或者多个值</td>
 </tr>
 <tr>
-<td>linsert key before</td>
-<td>after pivot value</td>
-<td>在一个元素的前</td>
-<td>后插入新的元素</td>
+<td>linsert key before/after pivot value</td>
+<td>在一个元素的前/后插入新的元素</td>
 </tr>
 <tr>
 <td>lset key index value</td>
@@ -319,7 +317,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; lpush fond study game sing</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; lrange fond 0 -1</span><br><span class="line">1) <span class="string">"sing"</span></span><br><span class="line">2) <span class="string">"game"</span></span><br><span class="line">3) <span class="string">"study"</span></span><br><span class="line">127.0.0.1:6379&gt; rpush friends Jane Jack</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; linsert friends after Jack kangkang</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; lrange friends 0 -1</span><br><span class="line">1) <span class="string">"Jane"</span></span><br><span class="line">2) <span class="string">"Jack"</span></span><br><span class="line">3) <span class="string">"kangkang"</span></span><br><span class="line">127.0.0.1:6379&gt; lset fond 2 swim</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; lpop fond</span><br><span class="line"><span class="string">"sing"</span></span><br><span class="line">127.0.0.1:6379&gt; rpop friends</span><br><span class="line"><span class="string">"kangkang"</span></span><br><span class="line">127.0.0.1:6379&gt; lrange fond 0 -1</span><br><span class="line">1) <span class="string">"game"</span></span><br><span class="line">2) <span class="string">"swim"</span></span><br><span class="line">127.0.0.1:6379&gt; llen fond</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; lindex fond 0</span><br><span class="line"><span class="string">"game"</span></span><br><span class="line">127.0.0.1:6379&gt; ltrim friends 0 2</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; lrange friends 0 -1</span><br><span class="line">1) <span class="string">"Jane"</span></span><br><span class="line">2) <span class="string">"Jack"</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
-<li>哈希</li>
+<li><strong>哈希</strong></li>
 </ul>
 </blockquote>
 <p>Redis的哈希(Hash)可以存储多个键值对，其中的键和值都是字符串。Hash命令及描述如下表所示：</p>
@@ -380,7 +378,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; hset point x 10</span><br><span class="line">(<span class="built_in">integer</span>) 1</span><br><span class="line">127.0.0.1:6379&gt; hmset point y 20</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; hget point y</span><br><span class="line"><span class="string">"20"</span></span><br><span class="line">127.0.0.1:6379&gt; hmget point</span><br><span class="line">(error) ERR wrong number of argu</span><br><span class="line">127.0.0.1:6379&gt; hmget point x z</span><br><span class="line">1) <span class="string">"10"</span></span><br><span class="line">2) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hgetall point</span><br><span class="line">1) <span class="string">"x"</span></span><br><span class="line">2) <span class="string">"10"</span></span><br><span class="line">3) <span class="string">"y"</span></span><br><span class="line">4) <span class="string">"20"</span></span><br><span class="line">5) <span class="string">"z"</span></span><br><span class="line">6) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hkeys point</span><br><span class="line">1) <span class="string">"x"</span></span><br><span class="line">2) <span class="string">"y"</span></span><br><span class="line">3) <span class="string">"z"</span></span><br><span class="line">127.0.0.1:6379&gt; hvals point</span><br><span class="line">1) <span class="string">"10"</span></span><br><span class="line">2) <span class="string">"20"</span></span><br><span class="line">3) <span class="string">"30"</span></span><br><span class="line">127.0.0.1:6379&gt; hlen point</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br><span class="line">127.0.0.1:6379&gt; hexists point w</span><br><span class="line">(<span class="built_in">integer</span>) 0</span><br><span class="line">127.0.0.1:6379&gt; hstrlen point x</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br><span class="line">127.0.0.1:6379&gt; hdel point x y z</span><br><span class="line">(<span class="built_in">integer</span>) 3</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
-<li>集合</li>
+<li><strong>集合</strong></li>
 </ul>
 </blockquote>
 <p>Redis中的集合(set)可以存储多个唯一的字符串。set命令及描述如下表所示：</p>
@@ -429,7 +427,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; sadd color red black blue whi</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; smembers color</span><br><span class="line">1) <span class="string">"black"</span></span><br><span class="line">2) <span class="string">"white"</span></span><br><span class="line">3) <span class="string">"blue"</span></span><br><span class="line">4) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; scard color</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; sismember color yellow</span><br><span class="line">(<span class="built_in">integer</span>) 0</span><br><span class="line">127.0.0.1:6379&gt; sadd colors red blue yellow p</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; sinter color colors</span><br><span class="line">1) <span class="string">"blue"</span></span><br><span class="line">2) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; sdiff color colors</span><br><span class="line">1) <span class="string">"black"</span></span><br><span class="line">2) <span class="string">"white"</span></span><br><span class="line">127.0.0.1:6379&gt; sunion color colors</span><br><span class="line">1) <span class="string">"yellow"</span></span><br><span class="line">2) <span class="string">"black"</span></span><br><span class="line">3) <span class="string">"pink"</span></span><br><span class="line">4) <span class="string">"white"</span></span><br><span class="line">5) <span class="string">"blue"</span></span><br><span class="line">6) <span class="string">"red"</span></span><br><span class="line">127.0.0.1:6379&gt; srem color red black</span><br><span class="line">(<span class="built_in">integer</span>) 2</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
-<li>有序集合</li>
+<li><strong>有序集合</strong></li>
 </ul>
 </blockquote>
 <p>Redis中的有序集合(ZSet)与集合(Set)类似，可以存储多个唯一的字符串，但在有序集合中，每个成员都有一个分数，所有成员按给定分数在集合中有序排列。Zset命令及描述如下图所示：</p>
@@ -474,7 +472,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; zadd country 1 China 2 Russia 3 India 4 France</span><br><span class="line">(<span class="built_in">integer</span>) 5</span><br><span class="line">127.0.0.1:6379&gt; zrange country 0 -1</span><br><span class="line">1) <span class="string">"China"</span></span><br><span class="line">2) <span class="string">"Russia"</span></span><br><span class="line">3) <span class="string">"India"</span></span><br><span class="line">4) <span class="string">"France"</span></span><br><span class="line">5) <span class="string">"Italy"</span></span><br><span class="line">127.0.0.1:6379&gt; zrangebyscore country 1 3</span><br><span class="line">1) <span class="string">"China"</span></span><br><span class="line">2) <span class="string">"Russia"</span></span><br><span class="line">3) <span class="string">"India"</span></span><br><span class="line">127.0.0.1:6379&gt; zcount country 1 4</span><br><span class="line">(<span class="built_in">integer</span>) 4</span><br><span class="line">127.0.0.1:6379&gt; zcard country</span><br><span class="line">(<span class="built_in">integer</span>) 5</span><br><span class="line">127.0.0.1:6379&gt; zscore country China</span><br><span class="line"><span class="string">"1"</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
-<li>key</li>
+<li><strong>key</strong></li>
 </ul>
 </blockquote>
 <table>
