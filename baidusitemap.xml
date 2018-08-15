@@ -4,14 +4,16 @@
 
     
   <url>
-    <loc>https://acczmt.top/2018/08/14/test/</loc>
-    <lastmod>2018-08-15T12:38:02.839Z</lastmod>
+    <loc>https://acczmt.top/2018/08/07/scrapy%E7%BB%83%E4%B9%A0/</loc>
+    <lastmod>2018-08-15T12:47:45.783Z</lastmod>
     <data>
         <display>
-        <title>test</title>
-        <pubTime>2018-08-14T09:52:00.000Z</pubTime>
+        <title>scrapy实现下载图片</title>
+        <pubTime>2018-08-07T11:30:20.000Z</pubTime>
         
-        <tag>redis</tag>
+        <tag>Python</tag>
+         
+        <tag>scrapy</tag>
          
          
            
@@ -148,25 +150,6 @@
         <title>scrapy爬取jobbole</title>
         <pubTime>2018-08-13T13:00:00.000Z</pubTime>
         
-        <tag>scrapy</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://acczmt.top/2018/08/07/scrapy%E7%BB%83%E4%B9%A0/</loc>
-    <lastmod>2018-08-15T11:50:20.537Z</lastmod>
-    <data>
-        <display>
-        <title>scrapy实现下载图片</title>
-        <pubTime>2018-08-07T11:30:20.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
         <tag>scrapy</tag>
          
          
