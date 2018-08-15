@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="llt">
 <meta property="og:description" content="python学习">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/23.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2018-08-15T11:51:03.817Z">
+<meta property="og:image" content="https://acczmt.top/img/Bing_1280/38997/23.jpg">
+<meta property="og:updated_time" content="2018-08-15T13:49:57.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selenium安装">
 <meta name="twitter:description" content="python学习">
-<meta name="twitter:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/23.jpg?imageView2/2/h/600">
+<meta name="twitter:image" content="https://acczmt.top/img/Bing_1280/38997/23.jpg">
   
     <link rel="alternative" href="/atom.xml" title="llt" type="application/atom+xml">
   
@@ -183,10 +183,7 @@
       
 	  
   	
-        <!-- <div align=center>
-<img src="/img/Bing_1280/38997/23.jpg" height="600" />
-</div> -->
-<img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/az/23.jpg?imageView2/2/h/600">
+        <p><div align="center"><br><img src="/img/Bing_1280/38997/23.jpg" height="600"><br></div><br><!-- <img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/az/23.jpg?imageView2/2/h/600"> –&gt;</p>
 <h2 id="selenium-是一个自动化测试工具"><a href="#selenium-是一个自动化测试工具" class="headerlink" title="selenium 是一个自动化测试工具"></a>selenium 是一个自动化测试工具</h2><h2 id="selenium的特点："><a href="#selenium的特点：" class="headerlink" title="selenium的特点："></a>selenium的特点：</h2><ul>
 <li>1.由程序控制浏览器进行操作，而不是手动操作浏览器</li>
 <li>2.程序控制浏览器进行操作的时候，速度非常慢，所以要谨慎使用selenium</li>
@@ -197,12 +194,12 @@
 <p>如果电脑同时安装了python3 和python2 把pip 改成pip3 或者pip2 就可以了</p>
 <p>然后我们创建一个py文件，使用selenium  <code>注意：文件名一定不要和python包的名字相同，否则会报错</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">driver = webdriver.Firefox()</span><br><span class="line">driver.get(<span class="string">'http://www.baidu.com'</span>)</span><br><span class="line">driver.find_element_by_id(<span class="string">'kw'</span>).send_keys(<span class="string">'selenium'</span>)</span><br></pre></td></tr></table></figure></p>
 <p>运行发现会报错，因为我们没有安装浏览器驱动，下载之前先检查谷歌和火狐浏览器的版本，然后根据版本号下载对应的驱动。</p>
-<p>可以从该<a href="http://chromedriver.chromium.org/downloads" target="_blank" rel="noopener">chromedriver</a>网站下载对应chromedriver的驱动,从<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="noopener">geckodriver</a>下载对应版本的驱动。</p>
+<p>可以从该<a href="http://chromedriver.chromium.org/downloads">chromedriver</a>网站下载对应chromedriver的驱动,从<a href="https://github.com/mozilla/geckodriver/releases">geckodriver</a>下载对应版本的驱动。</p>
 <p>下载完之后将两个压缩包解压，将两个 [ .exe ] 文件放到python同级目录下，与python.exe文件平级即可，比如我的文件路径为 D:\python\Anaconda ，只需要将两个[ .exe ] 文件放到该目录下</p>
 <p>再次运行上面代码，如果出现错误将编译器关闭，重新打开。</p>
 <p>如果出现下面错误，可能是因为网速慢，页面还没有加载出来，程序就执行完毕，导致获取不到element元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selenium.common.exceptions.NoSuchElementException:Message: Unable to locate element: [id=&quot;kw&quot;]</span><br></pre></td></tr></table></figure></p>
 <p>解决办法：可以让程序隐式等待10秒，代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">driver = webdriver.Firefox()</span><br><span class="line">driver.get(<span class="string">'http://www.baidu.com'</span>)</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>) <span class="comment">#程序隐式等待10秒</span></span><br><span class="line">driver.find_element_by_id(<span class="string">'kw'</span>).send_keys(<span class="string">'selenium'</span>)</span><br></pre></td></tr></table></figure></p>
-<h3 id="无头浏览器PhantomJS的安装"><a href="#无头浏览器PhantomJS的安装" class="headerlink" title="无头浏览器PhantomJS的安装"></a>无头浏览器PhantomJS的安装</h3><p>首先下载<a href="http://phantomjs.org/download.html" target="_blank" rel="noopener">PhantomJS</a><br>第一种</p>
+<h3 id="无头浏览器PhantomJS的安装"><a href="#无头浏览器PhantomJS的安装" class="headerlink" title="无头浏览器PhantomJS的安装"></a>无头浏览器PhantomJS的安装</h3><p>首先下载<a href="http://phantomjs.org/download.html">PhantomJS</a><br>第一种</p>
 <ul>
 <li>下载完成后，放到合适的文件夹下解压，将其路径添加到环境变量中，路径如：D:\python\phantomjs-2.1.1-windows\bin<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line">driver = webdriver.PhantomJS(executable_path=<span class="string">r'D:\python\phantomjs-2.1.1-windows\bin\phantomjs.exe'</span>)</span><br><span class="line">driver.get(<span class="string">'http://www.baidu.com'</span>)</span><br></pre></td></tr></table></figure>
 </li>
@@ -213,7 +210,7 @@
 </li>
 </ul>
 <p>个人推荐使用第二种，比较方便</p>
-
+--></p>
 		
       
 
@@ -370,7 +367,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#selenium-是一个自动化测试工具"><span class="toc-number">1.</span> <span class="toc-text">selenium 是一个自动化测试工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#selenium的特点："><span class="toc-number">2.</span> <span class="toc-text">selenium的特点：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#无头浏览器PhantomJS的安装"><span class="toc-number">2.1.</span> <span class="toc-text">无头浏览器PhantomJS的安装</span></a></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
