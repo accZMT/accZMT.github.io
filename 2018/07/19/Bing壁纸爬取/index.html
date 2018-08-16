@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://acczmt.top">
   <title>Bing壁纸爬取 | llt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本次爬取采用xCss大大提供的接口 1234567891011121314151617from urllib.request import urlopenimport timepname = 0day = 0while True:    day +=1    url = &apos;https://bing.ioliu.cn/v1?d=&amp;#123;&amp;#125;&amp;amp;w=1280&apos;.format(day">
+  <meta name="description" content="本次爬取采用xCss大大提供的接口 1234567891011121314151617from urllib.request import urlopenimport timepname = 0day = 0while True:    day +=1    url = &apos;https://bing.ioliu.cn/v1?d=&amp;#123;&amp;#125;&amp;amp;w=1280&apos;.format(day)">
 <meta name="keywords" content="爬虫,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Bing壁纸爬取">
 <meta property="og:url" content="https://acczmt.top/2018/07/19/Bing壁纸爬取/index.html">
 <meta property="og:site_name" content="llt">
-<meta property="og:description" content="本次爬取采用xCss大大提供的接口 1234567891011121314151617from urllib.request import urlopenimport timepname = 0day = 0while True:    day +=1    url = &apos;https://bing.ioliu.cn/v1?d=&amp;#123;&amp;#125;&amp;amp;w=1280&apos;.format(day">
+<meta property="og:description" content="本次爬取采用xCss大大提供的接口 1234567891011121314151617from urllib.request import urlopenimport timepname = 0day = 0while True:    day +=1    url = &apos;https://bing.ioliu.cn/v1?d=&amp;#123;&amp;#125;&amp;amp;w=1280&apos;.format(day)">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/Bing_1280/99.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2018-08-16T00:52:42.374Z">
+<meta property="og:updated_time" content="2018-08-16T02:55:39.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bing壁纸爬取">
-<meta name="twitter:description" content="本次爬取采用xCss大大提供的接口 1234567891011121314151617from urllib.request import urlopenimport timepname = 0day = 0while True:    day +=1    url = &apos;https://bing.ioliu.cn/v1?d=&amp;#123;&amp;#125;&amp;amp;w=1280&apos;.format(day">
+<meta name="twitter:description" content="本次爬取采用xCss大大提供的接口 1234567891011121314151617from urllib.request import urlopenimport timepname = 0day = 0while True:    day +=1    url = &apos;https://bing.ioliu.cn/v1?d=&amp;#123;&amp;#125;&amp;amp;w=1280&apos;.format(day)">
 <meta name="twitter:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/Bing_1280/99.jpg?imageView2/2/h/600">
   
     <link rel="alternative" href="/atom.xml" title="llt" type="application/atom+xml">
@@ -183,8 +183,7 @@
       
 	  
   	
-        <img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/Bing_1280/99.jpg?imageView2/2/h/600">
-<p>本次爬取采用<a href="https://github.com/xCss/bing" title="GitHub" target="_blank" rel="noopener">xCss</a>大大提供的接口</p>
+        <p><div align="center"><br><img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/Bing_1280/99.jpg?imageView2/2/h/600"><br></div><br>本次爬取采用<a href="https://github.com/xCss/bing" title="GitHub" target="_blank" rel="noopener">xCss</a>大大提供的接口</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlopen</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line">pname = <span class="number">0</span></span><br><span class="line">day = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    day +=<span class="number">1</span></span><br><span class="line">    url = <span class="string">'https://bing.ioliu.cn/v1?d=&#123;&#125;&amp;w=1280'</span>.format(day)</span><br><span class="line"></span><br><span class="line">    response = urlopen(url)</span><br><span class="line">    responseStr = response.read()</span><br><span class="line"></span><br><span class="line">    pname +=<span class="number">1</span></span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'C:/Users/45125/Downloads/Bing_1280/&#123;&#125;.jpg'</span>.format(pname),<span class="string">'wb'</span>)<span class="keyword">as</span> f:</span><br><span class="line">        f.write(responseStr)</span><br><span class="line">        f.close()</span><br><span class="line">    time.sleep(<span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
 		
       
