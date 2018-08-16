@@ -8,17 +8,20 @@
   <link rel="dns-prefetch" href="https://acczmt.top">
   <title>selenium基础用法 | llt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Python,selenium">
+  <meta name="description" content="在上篇笔记中已经写下如何安装selenium以及配置浏览器驱动，传送门selenium 安装,下面会介绍selenium的基础用法。  以百度链接为例，由于selenium加载受到网速的影响，所以网速差运行可能会较慢或者出错 123from selenium import webdriverdriver = webdriver.Firefox()driver.get(&apos;http://www.b">
+<meta name="keywords" content="Python,selenium">
 <meta property="og:type" content="article">
 <meta property="og:title" content="selenium基础用法">
 <meta property="og:url" content="https://acczmt.top/2018/08/02/selenium基础用法/index.html">
 <meta property="og:site_name" content="llt">
+<meta property="og:description" content="在上篇笔记中已经写下如何安装selenium以及配置浏览器驱动，传送门selenium 安装,下面会介绍selenium的基础用法。  以百度链接为例，由于selenium加载受到网速的影响，所以网速差运行可能会较慢或者出错 123from selenium import webdriverdriver = webdriver.Firefox()driver.get(&apos;http://www.b">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://acczmt.top/img/Bing_1280/38997/22.jpg">
-<meta property="og:updated_time" content="2018-08-15T13:50:56.377Z">
+<meta property="og:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/22.jpg?imageView2/2/h/600">
+<meta property="og:updated_time" content="2018-08-16T00:54:59.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="selenium基础用法">
-<meta name="twitter:image" content="https://acczmt.top/img/Bing_1280/38997/22.jpg">
+<meta name="twitter:description" content="在上篇笔记中已经写下如何安装selenium以及配置浏览器驱动，传送门selenium 安装,下面会介绍selenium的基础用法。  以百度链接为例，由于selenium加载受到网速的影响，所以网速差运行可能会较慢或者出错 123from selenium import webdriverdriver = webdriver.Firefox()driver.get(&apos;http://www.b">
+<meta name="twitter:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/22.jpg?imageView2/2/h/600">
   
     <link rel="alternative" href="/atom.xml" title="llt" type="application/atom+xml">
   
@@ -180,7 +183,7 @@
       
 	  
   	
-        <p><div align="center"><br><img src="/img/Bing_1280/38997/22.jpg" height="600"><br></div><br><!-- <img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/az/22.jpg?imageView2/2/h/600"> –&gt;</p>
+        <img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/az/22.jpg?imageView2/2/h/600">
 <ul>
 <li><p>在上篇笔记中已经写下如何安装selenium以及配置浏览器驱动，传送门<a href="https://acczmt.top/2018/07/31/selenium%E5%AE%89%E8%A3%85/#more">selenium 安装</a>,下面会介绍selenium的基础用法。</p>
 </li>
@@ -207,7 +210,7 @@
 <li>主要练习对窗口的切换，代码中有注释</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">driver = webdriver.Chrome()  <span class="comment">#个人火狐浏览器加载不出来，所以使用谷歌</span></span><br><span class="line">driver.get(<span class="string">"http://www.baidu.com"</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 获取当前的window对象</span></span><br><span class="line">current_win = driver.current_window_handle</span><br><span class="line"><span class="comment"># current_win 当前网页的编号 driver.title 网页标题</span></span><br><span class="line">print(current_win,driver.title)</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 点击首页新闻链接</span></span><br><span class="line">driver.find_element_by_link_text(<span class="string">'新闻'</span>).click()</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 找到第一篇文章，然后点击查看</span></span><br><span class="line">driver.find_element_by_css_selector(<span class="string">'li.hdline0 a'</span>).click()</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 此时浏览器会有两个窗口</span></span><br><span class="line"> </span><br><span class="line"><span class="comment"># 获取所有的窗口</span></span><br><span class="line">all_windows = driver.window_handles</span><br><span class="line"><span class="comment"># 判断</span></span><br><span class="line"><span class="keyword">for</span> window <span class="keyword">in</span> all_windows:</span><br><span class="line">    <span class="keyword">if</span> window != current_win:</span><br><span class="line">        <span class="comment"># 切换到第二个窗口</span></span><br><span class="line">        driver.switch_to.window(window)</span><br><span class="line"><span class="comment"># 获取新闻标题 并输出，验证是否切换成功</span></span><br><span class="line">title = driver.find_element_by_css_selector(<span class="string">'.text_title h1'</span>).text</span><br><span class="line">print(title)</span><br><span class="line"><span class="comment"># 关闭当前窗口，即关闭新闻详细页面的窗口</span></span><br><span class="line">driver.close()</span><br><span class="line"><span class="comment"># 切换到新闻首页窗口</span></span><br><span class="line">driver.switch_to.window(current_win)</span><br><span class="line"><span class="comment"># 输出一条信息，验证是否切换成功</span></span><br><span class="line">print(driver.find_element_by_css_selector(<span class="string">'#footer span'</span>).text)</span><br><span class="line"><span class="comment"># 关闭浏览器</span></span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
-<h3 id="学习到这里只是selenium的冰山一角，更多功能还会继续学习"><a href="#学习到这里只是selenium的冰山一角，更多功能还会继续学习" class="headerlink" title="学习到这里只是selenium的冰山一角，更多功能还会继续学习"></a>学习到这里只是selenium的冰山一角，更多功能还会继续学习</h3>--></p>
+<h3 id="学习到这里只是selenium的冰山一角，更多功能还会继续学习"><a href="#学习到这里只是selenium的冰山一角，更多功能还会继续学习" class="headerlink" title="学习到这里只是selenium的冰山一角，更多功能还会继续学习"></a>学习到这里只是selenium的冰山一角，更多功能还会继续学习</h3>
 		
       
 

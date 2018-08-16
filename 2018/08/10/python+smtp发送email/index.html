@@ -8,17 +8,20 @@
   <link rel="dns-prefetch" href="https://acczmt.top">
   <title>python+smtp发送email | llt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="smtp,email">
+  <meta name="description" content="今天刚学过使用smtplib和email发送邮件，感觉挺有意思的，下面为自己的学习总结 使用python+smtp 需要开启smtp服务，这里使用qq邮箱密码为第三方登录授权码 1.引入所需要的包 1234567import smtplib# 创建包含文本数据的邮件体from email.mime.text import MIMEText # 创建包含图片数据的邮件体from email.mim">
+<meta name="keywords" content="smtp,email">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python+smtp发送email">
 <meta property="og:url" content="https://acczmt.top/2018/08/10/python+smtp发送email/index.html">
 <meta property="og:site_name" content="llt">
+<meta property="og:description" content="今天刚学过使用smtplib和email发送邮件，感觉挺有意思的，下面为自己的学习总结 使用python+smtp 需要开启smtp服务，这里使用qq邮箱密码为第三方登录授权码 1.引入所需要的包 1234567import smtplib# 创建包含文本数据的邮件体from email.mime.text import MIMEText # 创建包含图片数据的邮件体from email.mim">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://acczmt.top/img/Bing_1280/38997/16.jpg">
-<meta property="og:updated_time" content="2018-08-15T13:53:04.475Z">
+<meta property="og:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/16.jpg?imageView2/2/h/600">
+<meta property="og:updated_time" content="2018-08-16T00:51:37.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python+smtp发送email">
-<meta name="twitter:image" content="https://acczmt.top/img/Bing_1280/38997/16.jpg">
+<meta name="twitter:description" content="今天刚学过使用smtplib和email发送邮件，感觉挺有意思的，下面为自己的学习总结 使用python+smtp 需要开启smtp服务，这里使用qq邮箱密码为第三方登录授权码 1.引入所需要的包 1234567import smtplib# 创建包含文本数据的邮件体from email.mime.text import MIMEText # 创建包含图片数据的邮件体from email.mim">
+<meta name="twitter:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/16.jpg?imageView2/2/h/600">
   
     <link rel="alternative" href="/atom.xml" title="llt" type="application/atom+xml">
   
@@ -180,7 +183,7 @@
       
 	  
   	
-        <p><div align="center"><br><img src="/img/Bing_1280/38997/16.jpg" height="600"><br></div><br><!-- <img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/az/16.jpg?imageView2/2/h/600"> –&gt;</p>
+        <img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/az/16.jpg?imageView2/2/h/600">
 <p>今天刚学过使用smtplib和email发送邮件，感觉挺有意思的，下面为自己的学习总结</p>
 <p><code>使用python+smtp 需要开启smtp服务，这里使用qq邮箱</code><br><code>密码为第三方登录授权码</code></p>
 <p>1.引入所需要的包</p>
@@ -190,7 +193,7 @@
 <p>4.发送图片<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">HOST = <span class="string">"smtp.qq.com"</span></span><br><span class="line">FROM = <span class="string">"XXX@qq.com"</span></span><br><span class="line">TO = <span class="string">'XX@qq.com'</span></span><br><span class="line"></span><br><span class="line">message = MIMEMultipart(<span class="string">'related'</span>)</span><br><span class="line"></span><br><span class="line">message_text = MIMEText(<span class="string">'&lt;h1 style="color:blue;font-size=100px"&gt;中午一起吃鸡&lt;/h1&gt;&lt;img src="cid:big"&gt;'</span>,<span class="string">'html'</span>,<span class="string">'utf-8'</span>)</span><br><span class="line">message.attach(message_text)</span><br><span class="line"><span class="comment"># ---------添加图片</span></span><br><span class="line">img_data = open(<span class="string">'timg.gif'</span>,<span class="string">'rb'</span>)</span><br><span class="line"><span class="comment"># 设置读取获取的二进制数据</span></span><br><span class="line">message_img = MIMEImage(img_data.read())</span><br><span class="line">img_data.close()</span><br><span class="line"><span class="comment"># 将图片添加到文本中去</span></span><br><span class="line">message_img.add_header(<span class="string">'Content-ID'</span>,<span class="string">'big'</span>)</span><br><span class="line">message.attach(message_img)</span><br><span class="line"><span class="comment"># -------------发送图片第二种 与添加附件文件的方式一样</span></span><br><span class="line">message_img = MIMEText(open(<span class="string">'timg.gif'</span>,<span class="string">'rb'</span>).read(),<span class="string">'base64'</span>,<span class="string">'utf-8'</span>)</span><br><span class="line">message_img[<span class="string">'Content-disposition'</span>] = <span class="string">'attachment;filename="happy.gif"'</span></span><br><span class="line">message.attach(message_img)</span><br><span class="line"></span><br><span class="line">message[<span class="string">'From'</span>] = FROM</span><br><span class="line">message[<span class="string">'To'</span>] = TO</span><br><span class="line">message[<span class="string">'Subject'</span>] = SUBJECT</span><br><span class="line"></span><br><span class="line">email_client = smtplib.SMTP_SSL()</span><br><span class="line">email_client.connect(HOST,<span class="string">'465'</span>)</span><br><span class="line">result = email_client.login(FROM,<span class="string">'xxx'</span>)</span><br><span class="line">print(<span class="string">"登录结果："</span>,result)</span><br><span class="line">email_client.sendmail(FROM,TO,message.as_string())</span><br><span class="line">email_client.close()</span><br></pre></td></tr></table></figure></p>
 <p>5.群发邮件</p>
 <p>只需要修改收件人字段和sendmail里面的TO字段，如下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TO = <span class="string">'xxxxx@163.com,xxx@qq.com'</span></span><br><span class="line"></span><br><span class="line">email_client.sendmail(FROM,TO.split(<span class="string">','</span>),message.as_string())</span><br></pre></td></tr></table></figure></p>
---></p>
+
 		
       
 
