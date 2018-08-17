@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://acczmt.top">
-  <title>selenium获取美食杰信息 | llt</title>
+  <title>scrapy_redis | llt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习目的：练习selenium的用法，获取美食杰—&amp;gt;菜谱大全—&amp;gt;早餐 页面中的菜名以及作者名，保存到TXT文件中  1、首先引入所需要的包 123from selenium.webdriver.common.action_chains import ActionChains #模拟鼠标from selenium import webdriverimport time  2、打开美">
-<meta name="keywords" content="Python,selenium">
+  <meta name="description" content="使用scrapy_redis的步骤总结，本文以智联招聘网站为例,通过分析查看，该网站数据为动态加载出来，所以直接获取源码无法达到我们想要的结果。有两种方法解决：   使用scrapy+selenium+PhantomJS  使用api接口，解析json文件     这里采用第二种方法。(个人认为第二种比较方便，速度也快)  进入智联招聘,按F12，依次点击Network、XMR，点击第3页，">
+<meta name="keywords" content="scrapy,redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="selenium获取美食杰信息">
-<meta property="og:url" content="https://acczmt.top/2018/08/02/selenium获取美食杰信息/index.html">
+<meta property="og:title" content="scrapy_redis">
+<meta property="og:url" content="https://acczmt.top/2018/08/16/scrapy_redis/index.html">
 <meta property="og:site_name" content="llt">
-<meta property="og:description" content="学习目的：练习selenium的用法，获取美食杰—&amp;gt;菜谱大全—&amp;gt;早餐 页面中的菜名以及作者名，保存到TXT文件中  1、首先引入所需要的包 123from selenium.webdriver.common.action_chains import ActionChains #模拟鼠标from selenium import webdriverimport time  2、打开美">
+<meta property="og:description" content="使用scrapy_redis的步骤总结，本文以智联招聘网站为例,通过分析查看，该网站数据为动态加载出来，所以直接获取源码无法达到我们想要的结果。有两种方法解决：   使用scrapy+selenium+PhantomJS  使用api接口，解析json文件     这里采用第二种方法。(个人认为第二种比较方便，速度也快)  进入智联招聘,按F12，依次点击Network、XMR，点击第3页，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/21.jpg?imageView2/2/h/600">
-<meta property="og:updated_time" content="2018-08-16T03:01:03.704Z">
+<meta property="og:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/13.jpg?imageView2/2/h/600">
+<meta property="og:updated_time" content="2018-08-17T02:45:04.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="selenium获取美食杰信息">
-<meta name="twitter:description" content="学习目的：练习selenium的用法，获取美食杰—&amp;gt;菜谱大全—&amp;gt;早餐 页面中的菜名以及作者名，保存到TXT文件中  1、首先引入所需要的包 123from selenium.webdriver.common.action_chains import ActionChains #模拟鼠标from selenium import webdriverimport time  2、打开美">
-<meta name="twitter:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/21.jpg?imageView2/2/h/600">
+<meta name="twitter:title" content="scrapy_redis">
+<meta name="twitter:description" content="使用scrapy_redis的步骤总结，本文以智联招聘网站为例,通过分析查看，该网站数据为动态加载出来，所以直接获取源码无法达到我们想要的结果。有两种方法解决：   使用scrapy+selenium+PhantomJS  使用api接口，解析json文件     这里采用第二种方法。(个人认为第二种比较方便，速度也快)  进入智联招聘,按F12，依次点击Network、XMR，点击第3页，">
+<meta name="twitter:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/13.jpg?imageView2/2/h/600">
   
     <link rel="alternative" href="/atom.xml" title="llt" type="application/atom+xml">
   
@@ -160,7 +160,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-selenium获取美食杰信息" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-scrapy_redis" class="article article-type-post " itemscope itemprop="blogPost">
 
 	
  
@@ -171,13 +171,13 @@
         
   
     <h1 class="article-title" itemprop="name">
-      selenium获取美食杰信息
+      scrapy_redis
     </h1>
   
 		    
         
-        <a href="/2018/08/02/selenium获取美食杰信息/" class="archive-article-date">
-  	<time datetime="2018-08-01T20:10:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
+        <a href="/2018/08/16/scrapy_redis/" class="archive-article-date">
+  	<time datetime="2018-08-16T12:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-16</time>
 </a>
         
       </header>
@@ -187,34 +187,61 @@
       
 	  
   	
-        <div align="center"><br><img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/az/21.jpg?imageView2/2/h/600"><br></div>
+        <div align="center"><br><img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/az/13.jpg?imageView2/2/h/600"><br></div>
 
-<ul>
-<li><p>学习目的：练习selenium的用法，获取<a href="http://www.meishij.net/" target="_blank" rel="noopener">美食杰</a>—&gt;菜谱大全—&gt;<a href="https://www.meishij.net/chufang/diy/zaocan/" target="_blank" rel="noopener">早餐</a> 页面中的菜名以及作者名，保存到TXT文件中</p>
-</li>
-<li><p>1、首先引入所需要的包</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium.webdriver.common.action_chains <span class="keyword">import</span> ActionChains <span class="comment">#模拟鼠标</span></span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2、打开美食杰的首页，隐式等待十秒，等待页面加载完成</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">driver = webdriver.Firefox()</span><br><span class="line">driver.get(<span class="string">'https://www.meishij.net/'</span>)</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>3、通过查找到&lt;菜谱大全&gt;在网页中的位置，模拟鼠标移动到&lt;菜谱大全&gt;上</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cai_pu = driver.find_element_by_css_selector(<span class="string">'li.hasmore a.link.pngFix'</span>)</span><br><span class="line">ActionChains(driver).move_to_element(cai_pu).perform()</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>4、找到&lt;早餐&gt;,并自动点击跳转到&lt;早餐&gt;页面上</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">driver.find_element_by_link_text(<span class="string">'早餐'</span>).click()</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>5、模拟鼠标下拉滑动条</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用js控制滑动条</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">7</span>,<span class="number">2</span>):</span><br><span class="line">    x = float(row) / <span class="number">6</span></span><br><span class="line">    js = <span class="string">'document.documentElement.scrollTop = document.documentElement.scrollHeight * %f'</span>%x</span><br><span class="line">    driver.execute_script(js)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>6、获取早餐美食的信息，保存到meishijie.txt 文件中</p>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">info_lists = driver.find_elements_by_css_selector(<span class="string">'div.c1'</span>)</span><br><span class="line"><span class="keyword">for</span> info <span class="keyword">in</span> info_lists:</span><br><span class="line">    name = info.find_element_by_tag_name(<span class="string">'strong'</span>).text</span><br><span class="line">    author = info.find_element_by_tag_name(<span class="string">'em'</span>).text</span><br><span class="line">    <span class="comment"># print(name + "--&gt;" +author)</span></span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'meishijie.txt'</span>,<span class="string">'a'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(name+<span class="string">"--&gt;"</span>+author+<span class="string">"\n"</span>)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>7、以下是完整代码</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium.webdriver.common.action_chains <span class="keyword">import</span> ActionChains <span class="comment">#模拟鼠标</span></span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"> </span><br><span class="line">driver = webdriver.Firefox()</span><br><span class="line">driver.get(<span class="string">'https://www.meishij.net/'</span>)</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line"> </span><br><span class="line">cai_pu = driver.find_element_by_css_selector(<span class="string">'li.hasmore a.link.pngFix'</span>)</span><br><span class="line">ActionChains(driver).move_to_element(cai_pu).perform()</span><br><span class="line">driver.find_element_by_link_text(<span class="string">'早餐'</span>).click()</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment">#只获取前三页数据，要获取多页只需修改range值</span></span><br><span class="line"><span class="keyword">for</span> page <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">4</span>):</span><br><span class="line">    print(<span class="string">f"正在获取第<span class="subst">&#123;page&#125;</span>页"</span>)</span><br><span class="line">    <span class="comment"># 使用js控制滑动条</span></span><br><span class="line">    <span class="keyword">for</span> row <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">7</span>,<span class="number">2</span>):</span><br><span class="line">        x = float(row) / <span class="number">6</span></span><br><span class="line">        js = <span class="string">'document.documentElement.scrollTop = document.documentElement.scrollHeight * %f'</span>%x</span><br><span class="line">        driver.execute_script(js)</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line">    info_lists = driver.find_elements_by_css_selector(<span class="string">'div.c1'</span>)</span><br><span class="line">    <span class="keyword">for</span> info <span class="keyword">in</span> info_lists:</span><br><span class="line">        name = info.find_element_by_tag_name(<span class="string">'strong'</span>).text</span><br><span class="line">        author = info.find_element_by_tag_name(<span class="string">'em'</span>).text</span><br><span class="line">        <span class="comment"># print(name + "--&gt;" +author)</span></span><br><span class="line">        <span class="keyword">with</span> open(<span class="string">'meishijie.txt'</span>,<span class="string">'a'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(name+<span class="string">"--&gt;"</span>+author+<span class="string">"\n"</span>)</span><br><span class="line">    <span class="comment"># 点击下一页链接</span></span><br><span class="line">    next_page = driver.find_element_by_class_name(<span class="string">'next'</span>)</span><br><span class="line">    <span class="keyword">if</span> next_page:</span><br><span class="line">        next_page.click()</span><br><span class="line">    <span class="keyword">else</span>:print(<span class="string">"已经最后一页了"</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 关闭浏览器</span></span><br><span class="line">driver.quit()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用scrapy_redis的步骤总结，本文以<a href="https://sou.zhaopin.com/?p=1&amp;jl=489" target="_blank" rel="noopener">智联招聘</a>网站为例,通过分析查看，该网站数据为动态加载出来，所以直接获取源码无法达到我们想要的结果。<br>有两种方法解决：</p>
+<blockquote>
+<ol>
+<li>使用scrapy+selenium+PhantomJS </li>
+<li>使用api接口，解析json文件</li>
+</ol>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>这里采用第二种方法。(个人认为第二种比较方便，速度也快)</p>
+</blockquote>
+<p>进入<a href="https://sou.zhaopin.com/?p=1&amp;jl=489" target="_blank" rel="noopener">智联招聘</a>,按F12，依次点击Network、XMR，<code>点击第3页</code>，找到<code>sou?pageSize=120&amp;cityId=489</code>开头的文件后点击，之后再点击<code>Preview</code>可以看到有我们想要的数据。</p>
+<p>找到数据，那么开始构造URL</p>
+<p>点击Headers,可以看到General下有Request URL<br>复制此url,如下:<code>https://fe-api.zhaopin.com/c/i/sou?start=180&amp;pageSize=60&amp;cityId=489&amp;workExperience=-1&amp;education=-1&amp;companyType=-1&amp;employmentType=-1&amp;jobWelfareTag=-1&amp;kt=3&amp;lastUrlQuery=%7B%22p%22:4,%22jl%22:%22489%22%7D</code></p>
+<p><strong><code>重中之中：通过分析智联网站手动修改输入框的页数会自动跳到第一页，刷新也会跳到第一页，根据url可以发现其中有三个重要参数start,pageSize,lastUrlQuery，所以通过修改start和pageSize即可得到每页的数据(如果还是出现数据重复，就把url补全)</code></strong>,</p>
+<p>我们将此url简化后也是可以运行的,此时的pageSize的值改为了100是为了每页获取的数据更多<code>https://fe-api.zhaopin.com/c/i/sou?start=0&amp;pageSize=100&amp;cityId=489&amp;lastUrlQuery=%7B%22p%22:1,%22jl%22:%22489%22%7D</code></p>
+<p>拿到URl后就可以解析数据了，本文目的是使用redis分布式爬虫。</p>
+<blockquote>
+<p>在控制台执行以下语句，创建新的爬虫项目：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">scrapy startproject zhilian</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> zhilian</span><br><span class="line"></span><br><span class="line">scrapy genspider zhoapin zhaopin.com</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>修改items.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> scrapy.loader.processors <span class="keyword">import</span> TakeFirst</span><br><span class="line"><span class="keyword">from</span> scrapy.loader <span class="keyword">import</span> ItemLoader</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZhilianItemLoader</span><span class="params">(ItemLoader)</span>:</span></span><br><span class="line"></span><br><span class="line">    default_output_processor = TakeFirst()</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZhilianItem</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line"></span><br><span class="line">    title = scrapy.Field()</span><br><span class="line">    company = scrapy.Field()</span><br><span class="line">    salary = scrapy.Field()</span><br><span class="line">    city = scrapy.Field()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>修改spiders/zhaopin.py文件</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> scrapy_redis.spiders <span class="keyword">import</span> RedisCrawlSpider</span><br><span class="line"><span class="keyword">from</span> ..items <span class="keyword">import</span> ZhilianItemLoader,ZhilianItem</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZhaopinSpider</span><span class="params">(RedisCrawlSpider)</span>:</span></span><br><span class="line"></span><br><span class="line">    name = <span class="string">'zhaopin'</span></span><br><span class="line">    allowed_domains = [<span class="string">'zhaopin.com'</span>]</span><br><span class="line"></span><br><span class="line">    redis_key =<span class="string">'zhaopin:start_urls'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line"></span><br><span class="line">        datas = json.loads(response.text)</span><br><span class="line">        data_list = datas[<span class="string">'data'</span>][<span class="string">'results'</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> data <span class="keyword">in</span> data_list:</span><br><span class="line">            item_loader = ZhilianItemLoader(item=ZhilianItem(),response=response)</span><br><span class="line"></span><br><span class="line">            item_loader.add_value(<span class="string">'title'</span>,data[<span class="string">'jobName'</span>])</span><br><span class="line">            item_loader.add_value(<span class="string">'company'</span>,data[<span class="string">'company'</span>][<span class="string">'name'</span>])</span><br><span class="line">            item_loader.add_value(<span class="string">'salary'</span>,data[<span class="string">'salary'</span>])</span><br><span class="line">            item_loader.add_value(<span class="string">'city'</span>,data[<span class="string">'city'</span>][<span class="string">'display'</span>])</span><br><span class="line"></span><br><span class="line">            item = item_loader.load_item()</span><br><span class="line"></span><br><span class="line">            <span class="keyword">yield</span> item</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>修改pipelines.py 将获取的数据保存为json文件，最后运行实现分布式爬虫也可以分清楚本机爬了多少条数据</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZhilianPipeline</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 这里写入文件格式 必须是以二进制 </span></span><br><span class="line">        self.file = open(<span class="string">'zhaopin.json'</span>,<span class="string">'wb'</span>)</span><br><span class="line">        self.exporter = JsonItemExporter(self.file,ensure_ascii=<span class="keyword">False</span>,encoding=<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">open_spider</span><span class="params">(self,spider)</span>:</span></span><br><span class="line">        self.exporter.start_exporting()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span><span class="params">(self, item, spider)</span>:</span></span><br><span class="line">        self.exporter.export_item(item)</span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close_spider</span><span class="params">(self,spider)</span>:</span></span><br><span class="line"></span><br><span class="line">        self.exporter.finish_exporting()</span><br><span class="line">        self.file.close()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>修改settings.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ROBOTSTXT_OBEY = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定使用scrapy_redis的去重</span></span><br><span class="line">DUPEFILTER_CLASS = <span class="string">"scrapy_redis.dupefilter.RFPDupeFilter"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定使用scrapy_redis的调度器</span></span><br><span class="line">SCHEDULER = <span class="string">"scrapy_redis.scheduler.Scheduler"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 指定排序爬取地址时使用的队列，</span></span><br><span class="line"><span class="comment"># 默认的 按优先级排序(Scrapy默认)，由sorted set实现的一种非FIFO、LIFO方式。</span></span><br><span class="line"><span class="comment"># SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'</span></span><br><span class="line"><span class="comment"># 可选的 按先进先出排序（FIFO）</span></span><br><span class="line"><span class="comment"># SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderQueue'</span></span><br><span class="line"><span class="comment"># 可选的 按后进先出排序（LIFO）</span></span><br><span class="line"><span class="comment"># SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderStack'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在redis中保持scrapy-redis用到的各个队列，从而允许暂停和暂停后恢复，也就是不清理redis queues</span></span><br><span class="line">SCHEDULER_PERSIST = <span class="keyword">True</span></span><br><span class="line"><span class="comment"># 192.168.52.105为作为master的ip地址，6379为端口号</span></span><br><span class="line">REDIS_URL = <span class="string">'redis://root:@192.168.52.105:6379'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># LOG等级</span></span><br><span class="line"><span class="comment"># LOG_LEVEL = 'DEBUG'</span></span><br><span class="line"></span><br><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">   <span class="string">'zhilian.pipelines.ZhilianPipeline'</span>: <span class="number">300</span>,</span><br><span class="line">    <span class="string">'scrapy_redis.pipelines.RedisPipeline'</span>:<span class="number">400</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在spiders目录下新建一个get_redis_key.py,添加以下内容。<code>注意运行此代码之前必须保证redis服务器开启</code><br><code>运行成功后将此代码注释掉(个人觉得注释掉心里比较放心)</code>，</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">""" 此文件目的是将url保存到redis数据库中，以后程序运行会提取该url """</span></span><br><span class="line"><span class="keyword">import</span> redis</span><br><span class="line"></span><br><span class="line"><span class="comment"># REDIS_KEY要和spiders/zhaopin.py下的redis_key一致</span></span><br><span class="line">REDIS_KEY = <span class="string">'zhaopin:start_urls'</span></span><br><span class="line">r = redis.StrictRedis(host=<span class="string">'192.168.52.105'</span>,port=<span class="number">6379</span>)</span><br><span class="line"><span class="comment"># 由于不知道总页数，所以暂时获取501页</span></span><br><span class="line"><span class="keyword">for</span> index,start <span class="keyword">in</span> enumerate(range(<span class="number">0</span>,<span class="number">50001</span>,<span class="number">100</span>)):</span><br><span class="line">    url = <span class="string">'https://fe-api.zhaopin.com/c/i/sou?start='</span>+str(start)+<span class="string">'&amp;pageSize=100&amp;cityId=489&amp;lastUrlQuery=&#123;%22p%22:'</span>+str(index+<span class="number">1</span>)+<span class="string">',%22jl%22:%22489%22&#125;'</span></span><br><span class="line">    r.rpush(REDIS_KEY,url)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在spiders文件下新建main.py，<code>注意运行此代码之前必须保证redis服务器开启</code></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scrapy <span class="keyword">import</span> cmdline</span><br><span class="line"></span><br><span class="line">cmdline.execute(<span class="string">'scrapy crawl zhaopin'</span>.split())</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>可以将代码发送到另外一台电脑(需要有运行代码的环境)，此时两台电脑同时运行main.py文件。结束后可以查看保存的zhaopin.json文件获取多少条数据。</p>
+</blockquote>
+<blockquote>
+<p>源码放到了GitHub上—&gt; <a href="https://github.com/accZMT/python_study/tree/master/zhilian" target="_blank" rel="noopener">传送门</a></p>
+</blockquote>
+
 		
       
 
@@ -259,11 +286,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">scrapy</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">selenium</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
         		</li>
       		
 		</ul>
@@ -319,7 +346,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://acczmt.top/2018/08/02/selenium获取美食杰信息/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://acczmt.top/2018/08/16/scrapy_redis/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -333,18 +360,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/08/07/scrapy练习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          scrapy实现下载图片
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/02/selenium基础用法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">selenium基础用法</div>
+    <a href="/2018/08/14/redis基本命令/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Redis基本命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -372,7 +390,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="selenium获取美食杰信息" data-title="selenium获取美食杰信息" data-url="https://acczmt.top/2018/08/02/selenium获取美食杰信息/"></div>
+	<div class="ds-thread" data-thread-key="scrapy_redis" data-title="scrapy_redis" data-url="https://acczmt.top/2018/08/16/scrapy_redis/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
