@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://acczmt.top">
-  <title>Archives | llt</title>
+  <title>scrapy + selenium爬取淘宝商品信息 | llt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="只想挽起你的手 戎马一生挥毫只为你">
-<meta property="og:type" content="website">
-<meta property="og:title" content="llt">
-<meta property="og:url" content="https://acczmt.top/archives/index.html">
+  <meta name="description" content="学习目的 使用scrapy框架获取动态网站信息，以淘宝为例， 获取商品的[描述,价格,商店，图片链接]将获取的信息保存到execl表，或者json文件，数据库中。 打开淘宝首页搜索一加手机，获取第一页url为https://s.taobao.com/search?q=%E4%B8%80%E5%8A%A0%E6%89%8B%E6%9C%BA&amp;amp;imgfile=&amp;amp;js=1&amp;a">
+<meta name="keywords" content="scrapy,selenium">
+<meta property="og:type" content="article">
+<meta property="og:title" content="scrapy + selenium爬取淘宝商品信息">
+<meta property="og:url" content="https://acczmt.top/2018/08/30/scrapy爬取淘宝信息/index.html">
 <meta property="og:site_name" content="llt">
-<meta property="og:description" content="只想挽起你的手 戎马一生挥毫只为你">
+<meta property="og:description" content="学习目的 使用scrapy框架获取动态网站信息，以淘宝为例， 获取商品的[描述,价格,商店，图片链接]将获取的信息保存到execl表，或者json文件，数据库中。 打开淘宝首页搜索一加手机，获取第一页url为https://s.taobao.com/search?q=%E4%B8%80%E5%8A%A0%E6%89%8B%E6%9C%BA&amp;amp;imgfile=&amp;amp;js=1&amp;a">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/10.jpg?imageView/2/2/h/600">
+<meta property="og:updated_time" content="2018-08-30T14:29:49.364Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="llt">
-<meta name="twitter:description" content="只想挽起你的手 戎马一生挥毫只为你">
+<meta name="twitter:title" content="scrapy + selenium爬取淘宝商品信息">
+<meta name="twitter:description" content="学习目的 使用scrapy框架获取动态网站信息，以淘宝为例， 获取商品的[描述,价格,商店，图片链接]将获取的信息保存到execl表，或者json文件，数据库中。 打开淘宝首页搜索一加手机，获取第一页url为https://s.taobao.com/search?q=%E4%B8%80%E5%8A%A0%E6%89%8B%E6%9C%BA&amp;amp;imgfile=&amp;amp;js=1&amp;a">
+<meta name="twitter:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/10.jpg?imageView/2/2/h/600">
   
     <link rel="alternative" href="/atom.xml" title="llt" type="application/atom+xml">
   
@@ -156,36 +160,110 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-scrapy爬取淘宝信息" class="article article-type-post " itemscope itemprop="blogPost">
+
+	
+ 
+  <div class="article-inner">
+ 		 
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/30/scrapy爬取淘宝信息/" class="archive-article-date">
-  	<time datetime="2018-08-30T13:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/30/scrapy爬取淘宝信息/">scrapy + selenium爬取淘宝商品信息</a>
+    <h1 class="article-title" itemprop="name">
+      scrapy + selenium爬取淘宝商品信息
     </h1>
   
+		    
+        
+        <a href="/2018/08/30/scrapy爬取淘宝信息/" class="archive-article-date">
+  	<time datetime="2018-08-30T13:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+	
+      
+	  
+  	
+        <div align="center"><br>    <img src="http://pdhrh6d6j.bkt.clouddn.com/images/az/10.jpg?imageView/2/2/h/600"><br></div>
 
-        <div class="article-info info-on-right">
-          
+<p><code>学习目的</code> 使用scrapy框架获取动态网站信息，以淘宝为例， 获取商品的[描述,价格,商店，图片链接]将获取的信息保存到execl表，或者json文件，数据库中。</p>
+<p>打开淘宝首页搜索一加手机，获取<strong>第一页url</strong>为<code>https://s.taobao.com/search?q=%E4%B8%80%E5%8A%A0%E6%89%8B%E6%9C%BA&amp;imgfile=&amp;js=1&amp;stats_click=search_radio_all%3A1&amp;initiative_id=staobaoz_20180830&amp;ie=utf8</code>，</p>
+<p>点击下一页获取<strong>第二页url</strong>为<code>https://s.taobao.com/search?q=%E4%B8%80%E5%8A%A0%E6%89%8B%E6%9C%BA&amp;imgfile=&amp;js=1&amp;stats_click=search_radio_all%3A1&amp;initiative_id=staobaoz_20180830&amp;ie=utf8&amp;bcoffset=4&amp;p4ppushleft=1%2C48&amp;s=44&amp;ntoffset=4</code></p>
+<p>通过对比分析下一页的url主要通过<strong>s</strong>变化，每次增加44，所以url可以简化为<code>https://s.taobao.com/search?q=%E4%B8%80%E5%8A%A0%E6%89%8B%E6%9C%BA&amp;s=0</code></p>
+<p>下面开始写代码了</p>
+<blockquote>
+<p>新建一个项目文件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scrapy startproject taobao</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> taobao </span><br><span class="line">scrapy genspider phone s.taobao.com</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>item.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TaobaoItem</span><span class="params">(scrapy.Item)</span>:</span></span><br><span class="line"></span><br><span class="line">    img_src = scrapy.Field()</span><br><span class="line">    info = scrapy.Field()</span><br><span class="line">    price = scrapy.Field()</span><br><span class="line">    shop = scrapy.Field()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>spiders/phone.py</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="keyword">from</span> ..items <span class="keyword">import</span> TaobaoItem</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PhoneSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">'phone'</span></span><br><span class="line">    allowed_domains = [<span class="string">'s.taobao.com'</span>]</span><br><span class="line"></span><br><span class="line">    total_page = <span class="number">20</span></span><br><span class="line">    start_urls = [<span class="string">'https://s.taobao.com/search?q=%E4%B8%80%E5%8A%A0%E6%89%8B%E6%9C%BA&amp;s=&#123;&#125;'</span>.format(i*<span class="number">44</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(total_page)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 配置谷歌浏览器无图和无界面模式</span></span><br><span class="line">        self.options = webdriver.ChromeOptions()</span><br><span class="line">        self.prefs = &#123;</span><br><span class="line">            <span class="string">'profile.default_content_setting_values'</span>:&#123;<span class="string">'images'</span>:<span class="number">2</span>&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        self.options.add_argument(<span class="string">'--headless'</span>)</span><br><span class="line">        self.options.add_argument(<span class="string">'--disable-gpu'</span>)</span><br><span class="line">        self.options.add_experimental_option(<span class="string">'prefs'</span>,self.prefs)</span><br><span class="line"></span><br><span class="line">        self.driver = webdriver.Chrome(chrome_options=self.options)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line"></span><br><span class="line">        data_list = response.xpath(<span class="string">'//div[@class="item J_MouserOnverReq  "]'</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> data <span class="keyword">in</span> data_list:</span><br><span class="line"></span><br><span class="line">            info = <span class="string">''</span>.join(data.xpath(<span class="string">'.//div[@class="row row-2 title"]/a/text()'</span>).extract()).strip().replace(<span class="string">'/'</span>,<span class="string">''</span>)</span><br><span class="line">            price = data.xpath(<span class="string">'.//div[@class="price g_price g_price-highlight"]/strong/text()'</span>).extract_first()</span><br><span class="line">            shop = data.xpath(<span class="string">'.//a[@class="shopname J_MouseEneterLeave J_ShopInfo"]/span[2]/text()'</span>).extract_first()</span><br><span class="line">            img_src = <span class="string">"https:"</span> + data.xpath(<span class="string">'.//a[@class="pic-link J_ClickStat J_ItemPicA"]/img/@data-src'</span>).extract_first()</span><br><span class="line"></span><br><span class="line">            item = TaobaoItem()</span><br><span class="line"></span><br><span class="line">            item[<span class="string">'info'</span>] = info</span><br><span class="line">            item[<span class="string">'price'</span>] = price</span><br><span class="line">            item[<span class="string">'shop'</span>] = shop</span><br><span class="line">            item[<span class="string">'img_src'</span>] = [img_src]</span><br><span class="line"></span><br><span class="line">            <span class="keyword">yield</span> item</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 获取总页数</span></span><br><span class="line">        <span class="comment"># self.total_page = response.xpath('//div[@class="total"]/text()').re_first('\d+')</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close</span><span class="params">(spider, reason)</span>:</span></span><br><span class="line"></span><br><span class="line">        spider.driver.close()</span><br><span class="line">        <span class="keyword">return</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>pipelines.py </p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlretrieve</span><br><span class="line"><span class="keyword">from</span> scrapy.exporters <span class="keyword">import</span> JsonItemExporter</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UrllibPipeline</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span><span class="params">(self, item, spider)</span>:</span></span><br><span class="line">        urlretrieve(item[<span class="string">"img_src"</span>][<span class="number">0</span>],<span class="string">"imgs/"</span>+item[<span class="string">"info"</span>]+<span class="string">".jpg"</span>)</span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">JsonFilePipeline</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.file = open(<span class="string">'taobao.json'</span>,<span class="string">'wb'</span>)</span><br><span class="line">        self.exporter = JsonItemExporter(self.file,ensure_ascii=<span class="keyword">False</span>,encoding=<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">open_spider</span><span class="params">(self,spider)</span>:</span></span><br><span class="line">        self.exporter.start_exporting()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span><span class="params">(self,item,spider)</span>:</span></span><br><span class="line">        self.exporter.export_item(item)</span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close_spider</span><span class="params">(self,spider)</span>:</span></span><br><span class="line">        self.exporter.finish_exporting()</span><br><span class="line">        self.file.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TaobaoPipeline</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.workbook = xlwt.Workbook(encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">        self.sheet = self.workbook.add_sheet(<span class="string">'一加手机'</span>)</span><br><span class="line">        self.info_list = [<span class="string">'info'</span>,<span class="string">'price'</span>,<span class="string">'shop'</span>,<span class="string">'img_src'</span>]</span><br><span class="line">        self.row = <span class="number">1</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">open_spider</span><span class="params">(self,spider)</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> index,info <span class="keyword">in</span> enumerate(self.info_list):</span><br><span class="line">            self.sheet.write(<span class="number">0</span>,index,info)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close_spider</span><span class="params">(self,spider)</span>:</span></span><br><span class="line"></span><br><span class="line">        self.workbook.save(<span class="string">"Taobao.xlsx"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span><span class="params">(self, item, spider)</span>:</span></span><br><span class="line"></span><br><span class="line">        data_list = [item[<span class="string">"info"</span>],item[<span class="string">"price"</span>],item[<span class="string">"shop"</span>],item[<span class="string">"img_src"</span>]]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> index,data <span class="keyword">in</span> enumerate(data_list):</span><br><span class="line">            self.sheet.write(self.row,index,data)</span><br><span class="line">        self.row += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SqlitePipeline</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.conn = sqlite3.connect(<span class="string">'taobaoDB'</span>)</span><br><span class="line">        self.cursor = self.conn.cursor()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">open_spider</span><span class="params">(self,spider)</span>:</span></span><br><span class="line"></span><br><span class="line">        self.cursor.execute(<span class="string">'create table if not exists phone (img text,info text,price text,shop text)'</span>)</span><br><span class="line">        self.conn.commit()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span><span class="params">(self,item,spider)</span>:</span></span><br><span class="line"></span><br><span class="line">        self.cursor.execute(<span class="string">f'insert into phone VALUES ("<span class="subst">&#123;item[<span class="string">"img_src"</span>]&#125;</span>","<span class="subst">&#123;item[<span class="string">"info"</span>]&#125;</span>","<span class="subst">&#123;item[<span class="string">"price"</span>]&#125;</span>","<span class="subst">&#123;item[<span class="string">"shop"</span>]&#125;</span>")'</span>)</span><br><span class="line">        self.conn.commit()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close_spider</span><span class="params">(self,spider)</span>:</span></span><br><span class="line"></span><br><span class="line">        self.conn.close()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>middlewares.py  此文件为中间件文件 ，在此添加一个下载中间件</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scrapy <span class="keyword">import</span> signals</span><br><span class="line"><span class="keyword">from</span> scrapy.http.response.html <span class="keyword">import</span> HtmlResponse</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SeleniumMiddleware</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_request</span><span class="params">(self,request,spider)</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> spider.name == <span class="string">"phone"</span>:</span><br><span class="line">            spider.driver.get(request.url)</span><br><span class="line">            spider.driver.implicitly_wait(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">            response = HtmlResponse(url=spider.driver.current_url,</span><br><span class="line">                                    request=request,</span><br><span class="line">                                    body=spider.driver.page_source,</span><br><span class="line">                                    encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">            <span class="keyword">return</span> response</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>修改settings.py </p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">ROBOTSTXT_OBEY = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line">DOWNLOADER_MIDDLEWARES = &#123;</span><br><span class="line">   <span class="comment"># 'taobao.middlewares.TaobaoDownloaderMiddleware': 543,</span></span><br><span class="line">   <span class="string">'taobao.middlewares.SeleniumMiddleware'</span>: <span class="number">2</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">   <span class="string">'taobao.pipelines.TaobaoPipeline'</span>: <span class="number">1</span>,</span><br><span class="line">   <span class="string">'taobao.pipelines.JsonFilePipeline'</span>: <span class="number">2</span>,</span><br><span class="line">   <span class="string">'taobao.pipelines.SqlitePipeline'</span>: <span class="number">4</span>,</span><br><span class="line">   <span class="comment"># 如果想要下载图片只需将下面一行解注释即可</span></span><br><span class="line">   <span class="comment"># 'taobao.pipelines.UrllibPipeline': 56,</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">IMAGES_STORE = <span class="string">'imgs'</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在spiders同级目录下新建main.py文件</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scrapy <span class="keyword">import</span> cmdline</span><br><span class="line"></span><br><span class="line">cmdline.execute(<span class="string">'scrapy crawl phone'</span>.split())</span><br></pre></td></tr></table></figure>
+<p>直接运行main.py文件即可。</p>
+<p>源码放到GitHub上–&gt; <a href="https://github.com/accZMT/python_study/tree/master/taobao" target="_blank" rel="noopener">点击获取</a></p>
+
+		
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -201,380 +279,125 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://acczmt.top/2018/08/30/scrapy爬取淘宝信息/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/29/node.js/" class="archive-article-date">
-  	<time datetime="2018-08-29T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-29</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/29/node.js/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">node.js简单使用</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/29/node.js/">node.js简单使用</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="scrapy爬取淘宝信息" data-title="scrapy + selenium爬取淘宝商品信息" data-url="https://acczmt.top/2018/08/30/scrapy爬取淘宝信息/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/29/打字小游戏/" class="archive-article-date">
-  	<time datetime="2018-08-29T03:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/29/打字小游戏/">打字小游戏</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">html5</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/16/scrapy_redis/" class="archive-article-date">
-  	<time datetime="2018-08-16T12:15:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/16/scrapy_redis/">scrapy_redis</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">scrapy</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/14/redis基本命令/" class="archive-article-date">
-  	<time datetime="2018-08-14T09:52:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/14/redis基本命令/">Redis基本命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/13/scrapy爬取jobbole/" class="archive-article-date">
-  	<time datetime="2018-08-13T13:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/13/scrapy爬取jobbole/">scrapy爬取jobbole</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">scrapy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/10/python+smtp发送email/" class="archive-article-date">
-  	<time datetime="2018-08-10T11:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/10/python+smtp发送email/">python+smtp发送email</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">smtp</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">email</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/09/安装mySQL版本5.6/" class="archive-article-date">
-  	<time datetime="2018-08-09T13:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/09/安装mySQL版本5.6/">安装mySQL版本5.6.41.0</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mySQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/08/pymysql存储中文数据出错解决方法/" class="archive-article-date">
-  	<time datetime="2018-08-08T14:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/08/pymysql存储中文数据出错解决方法/">pymysql存储中文数据出错解决方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pymysql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/07/scrapy+json保存/" class="archive-article-date">
-  	<time datetime="2018-08-07T14:23:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/07/scrapy+json保存/">scrapy + json保存</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">scrapy</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -602,8 +425,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
