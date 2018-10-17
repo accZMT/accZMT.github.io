@@ -4,14 +4,52 @@
 
     
   <url>
+    <loc>https://acczmt.top/2018/10/17/%E9%83%A8%E7%BD%B2Django/</loc>
+    <lastmod>2018-10-17T13:01:57.028Z</lastmod>
+    <data>
+        <display>
+        <title>Centos 7 下部署Django</title>
+        <pubTime>2018-10-17T11:00:00.000Z</pubTime>
+        
+        <tag>Django</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://acczmt.top/2018/09/28/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2018-10-08T12:14:21.765Z</lastmod>
+    <lastmod>2018-10-17T11:43:45.725Z</lastmod>
     <data>
         <display>
         <title>PEP8规范</title>
         <pubTime>2018-09-28T07:30:00.000Z</pubTime>
         
         <tag>python</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://acczmt.top/2018/07/27/169we%E5%A3%81%E7%BA%B8/</loc>
+    <lastmod>2018-10-17T09:56:30.989Z</lastmod>
+    <data>
+        <display>
+        <title>169we壁纸</title>
+        <pubTime>2018-07-27T09:30:00.000Z</pubTime>
+        
+        <tag>爬虫</tag>
+         
+        <tag>Python</tag>
+         
+        <tag>下载图片</tag>
          
          
            
@@ -86,27 +124,6 @@
         <tag>redis</tag>
          
         <tag>scrapy</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://acczmt.top/2018/07/27/169we%E5%A3%81%E7%BA%B8/</loc>
-    <lastmod>2018-08-17T02:08:40.202Z</lastmod>
-    <data>
-        <display>
-        <title>169we壁纸</title>
-        <pubTime>2018-07-27T09:30:00.000Z</pubTime>
-        
-        <tag>爬虫</tag>
-         
-        <tag>Python</tag>
-         
-        <tag>下载图片</tag>
          
          
            
