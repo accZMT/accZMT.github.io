@@ -17,7 +17,7 @@
 <meta property="og:description" content="环境：python3.6Django 2.1.2uWSGI 2.0.17.1Nginxos Centos 7 目录 安装Python3.6 安装mysql 创建虚拟环境 安装uWSGI(最好在虚拟环境下)   安装Nginx 配置项目 安装django项目依赖的包(在虚拟环境下)) 配置uwsgi启动django的参数 配置项目settings.py文件   配置nginx 重启Ngi">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/az/8.jpg?imageView/2/2/h/600">
-<meta property="og:updated_time" content="2018-10-17T13:01:57.028Z">
+<meta property="og:updated_time" content="2018-10-18T03:09:53.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Centos 7 下部署Django">
 <meta name="twitter:description" content="环境：python3.6Django 2.1.2uWSGI 2.0.17.1Nginxos Centos 7 目录 安装Python3.6 安装mysql 创建虚拟环境 安装uWSGI(最好在虚拟环境下)   安装Nginx 配置项目 安装django项目依赖的包(在虚拟环境下)) 配置uwsgi启动django的参数 配置项目settings.py文件   配置nginx 重启Ngi">
@@ -306,7 +306,7 @@ semanage port -l | grep http_port_t
 <p>部署大致流程</p>
 </blockquote>
 <ul>
-<li>修改setting文件之后</li>
+<li>修改setting文件之后 确保数据库连接正确</li>
 <li>python manage.py collectstatic 收集admin静态文件</li>
 <li>修改uwsgi.ini</li>
 <li>临时关闭防火墙 和 seLinux</li>
