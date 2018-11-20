@@ -8,18 +8,20 @@
   <link rel="dns-prefetch" href="https://acczmt.top">
   <title>微信公共号开发 | llt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用Django web框架进行个人微信公共号的开发，实现文字翻译以及语音翻译  准备工作 注册个人公共号 下载ngrok 申请腾讯AI开放平台个人密钥 创建虚拟环境 安装所需模块 (微信公众好开发文档)[https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1445241432] (wechatpy中文文档)[https://we">
+  <meta name="description" content="使用Django web框架进行个人微信公共号的开发，实现文字翻译以及语音翻译  准备工作 注册个人公共号 下载ngrok 申请腾讯AI开放平台个人密钥 创建虚拟环境 安装所需模块 微信公众好开发文档 wechatpy中文文档 腾讯AI开放平台文档  目录 创建虚拟环境 申请腾讯AI开放平台个人密钥 创建django项目 注册个人公共号 下载ngrok  创建虚拟环境12345678910pyt">
 <meta name="keywords" content="Django,微信公共号">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信公共号开发">
 <meta property="og:url" content="https://acczmt.top/2018/11/18/微信公共号开发/index.html">
 <meta property="og:site_name" content="llt">
-<meta property="og:description" content="使用Django web框架进行个人微信公共号的开发，实现文字翻译以及语音翻译  准备工作 注册个人公共号 下载ngrok 申请腾讯AI开放平台个人密钥 创建虚拟环境 安装所需模块 (微信公众好开发文档)[https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1445241432] (wechatpy中文文档)[https://we">
+<meta property="og:description" content="使用Django web框架进行个人微信公共号的开发，实现文字翻译以及语音翻译  准备工作 注册个人公共号 下载ngrok 申请腾讯AI开放平台个人密钥 创建虚拟环境 安装所需模块 微信公众好开发文档 wechatpy中文文档 腾讯AI开放平台文档  目录 创建虚拟环境 申请腾讯AI开放平台个人密钥 创建django项目 注册个人公共号 下载ngrok  创建虚拟环境12345678910pyt">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-19T13:57:59.660Z">
+<meta property="og:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/wx/截图.png?imageView2/2/h/600">
+<meta property="og:updated_time" content="2018-11-20T04:37:29.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信公共号开发">
-<meta name="twitter:description" content="使用Django web框架进行个人微信公共号的开发，实现文字翻译以及语音翻译  准备工作 注册个人公共号 下载ngrok 申请腾讯AI开放平台个人密钥 创建虚拟环境 安装所需模块 (微信公众好开发文档)[https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;amp;id=mp1445241432] (wechatpy中文文档)[https://we">
+<meta name="twitter:description" content="使用Django web框架进行个人微信公共号的开发，实现文字翻译以及语音翻译  准备工作 注册个人公共号 下载ngrok 申请腾讯AI开放平台个人密钥 创建虚拟环境 安装所需模块 微信公众好开发文档 wechatpy中文文档 腾讯AI开放平台文档  目录 创建虚拟环境 申请腾讯AI开放平台个人密钥 创建django项目 注册个人公共号 下载ngrok  创建虚拟环境12345678910pyt">
+<meta name="twitter:image" content="http://pdhrh6d6j.bkt.clouddn.com/images/wx/截图.png?imageView2/2/h/600">
   
     <link rel="alternative" href="/atom.xml" title="llt" type="application/atom+xml">
   
@@ -198,9 +200,9 @@
 <li>申请腾讯AI开放平台个人密钥</li>
 <li>创建虚拟环境</li>
 <li>安装所需模块</li>
-<li>(微信公众好开发文档)[<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432]" target="_blank" rel="noopener">https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432]</a></li>
-<li>(wechatpy中文文档)[<a href="https://wechatpy.readthedocs.io/zh_CN/master/]" target="_blank" rel="noopener">https://wechatpy.readthedocs.io/zh_CN/master/]</a></li>
-<li><a href="https://ai.qq.com/product/nlptrans.shtml#text" target="_blank" rel="noopener">腾讯AI开放平台</a></li>
+<li><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1445241432" target="_blank" rel="noopener">微信公众好开发文档</a></li>
+<li><a href="https://wechatpy.readthedocs.io/zh_CN/master/" target="_blank" rel="noopener">wechatpy中文文档</a></li>
+<li><a href="https://ai.qq.com/doc/nlptrans.shtml" target="_blank" rel="noopener">腾讯AI开放平台文档</a></li>
 </ul>
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
 <li><a href="#创建虚拟环境">创建虚拟环境</a></li>
@@ -254,16 +256,21 @@
 <h3 id="注册个人公共号"><a href="#注册个人公共号" class="headerlink" title="注册个人公共号"></a>注册个人公共号</h3><ul>
 <li>(注册链接)[<a href="https://mp.weixin.qq.com/]" target="_blank" rel="noopener">https://mp.weixin.qq.com/]</a> 此处不啰嗦，先熟悉熟悉公共号的使用</li>
 <li>在开发者工具中找到，公众平台测试账号</li>
-<li>一系列操作后，有个接口配置信息，将下一步获取的内容填写进去如： <a href="http://724bef67.ngrok.io/wx/" target="_blank" rel="noopener">http://724bef67.ngrok.io/wx/</a></li>
+<li>一系列操作后，有个接口配置信息，将下一步获取的内容填写进去如： <code>http://724bef67.ngrok.io/wx/</code></li>
 <li>配置接口信息时，要保证ngrox和django项目为运行状态</li>
 </ul>
 <h3 id="下载ngrok"><a href="#下载ngrok" class="headerlink" title="下载ngrok"></a>下载ngrok</h3><ul>
-<li>(下载链接)[<a href="https://ngrok.com/download]" target="_blank" rel="noopener">https://ngrok.com/download]</a></li>
+<li><a href="https://ngrok.com/download" target="_blank" rel="noopener">下载链接</a></li>
 <li>运行ngrok.exe,根据提示执行<code>ngrok.exe http 80</code></li>
-<li>复制第一个Forwarding 如： <a href="http://724bef67.ngrok.io，添加到接口配置信息中" target="_blank" rel="noopener">http://724bef67.ngrok.io，添加到接口配置信息中</a></li>
+<li>复制第一个Forwarding 如： <code>http://724bef67.ngrok.io</code>，添加到接口配置信息中</li>
 <li>注意<code>服务重新启动，接口配置信息的内网映射的地址就需要重新修改</code></li>
 </ul>
-<p>效果图：<br><img src="" alt=""></p>
+<h3 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h3><div align="center"><br><img title="BBB" alt="BBBB" src="http://pdhrh6d6j.bkt.clouddn.com/images/wx/截图.png?imageView2/2/h/600"><br></div>
+
+<h3 id="github"><a href="#github" class="headerlink" title="github"></a>github</h3><blockquote>
+<p>更多功能可以查看GitHub源码</p>
+</blockquote>
+<p><a href="https://github.com/accZMT/wxgzh" target="_blank" rel="noopener">源码</a></p>
 
 		
       
