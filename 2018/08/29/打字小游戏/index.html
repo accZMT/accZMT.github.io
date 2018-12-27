@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://acczmt.top">
   <title>打字小游戏 | llt</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://acczmt.top/img/Bing_1280/az/12.jpg">
 <meta property="og:image" content="https://acczmt.top/img/images/dazi.jpg">
-<meta property="og:updated_time" content="2018-11-23T08:04:32.829Z">
+<meta property="og:updated_time" content="2018-11-23T08:04:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="打字小游戏">
 <meta name="twitter:description" content="制作一个打字小游戏,效果图如下：        新建一个文件夹 ，添加animate.css 和 jquery.js 文件。 新建index.html文件，完整代码与所需文件在底部GitHub中。  由效果图可以分析出内容由两部分组成，一是字母，二是正确率。可以写成两个div标签，在body标签中写以下代码 123456&amp;lt;body&amp;gt;    &amp;lt;main&amp;gt;">
@@ -41,7 +41,7 @@
   
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -97,7 +97,7 @@
 		        
 			</div>
 			<div style="margin-top:30px;">
-			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=235 height=52 src="//music.163.com/outchain/player?type=2&id=422428451&auto=0&height=32"></iframe>
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="235" height="52" src="//music.163.com/outchain/player?type=2&id=422428451&auto=0&height=32"></iframe>
 			</div>
 		</nav>
 	</header>		
@@ -165,7 +165,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-打字小游戏" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-打字小游戏" class="article article-type-post " itemscope="" itemprop="blogPost">
 
 	
  
@@ -211,7 +211,7 @@
 <blockquote>
 <p>添加script:</p>
 </blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    var char = document.getElementById('char')</span></span><br><span class="line"><span class="undefined">    var result = document.getElementById('result')</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="undefined">    var correct = 0</span></span><br><span class="line"><span class="undefined">    var error = 0</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="undefined">    function showChar()&#123;</span></span><br><span class="line"><span class="undefined">        var random = Math.random() * 26</span></span><br><span class="line"><span class="undefined">        random = Math.floor(random) + 65</span></span><br><span class="line"><span class="undefined">        // 获取数字在ASCII表中所对应的字母</span></span><br><span class="line"><span class="undefined">        var zimu = String.fromCharCode(random)</span></span><br><span class="line"><span class="undefined">        char.innerText = zimu</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    // 方法一:</span></span><br><span class="line"><span class="undefined">    window.onkeyup = function(e)&#123;</span></span><br><span class="line"><span class="undefined">        if(e.key.toUpperCase() == char.innerText)&#123;</span></span><br><span class="line"><span class="undefined">            char.className = 'animated zoomIn'</span></span><br><span class="line"><span class="undefined">            showChar()</span></span><br><span class="line"><span class="undefined">            correct += 1 </span></span><br><span class="line"><span class="undefined">            setTimeout(clearAnimation,300)</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        else&#123;</span></span><br><span class="line"><span class="undefined">            char.className = 'animated shake error'</span></span><br><span class="line"><span class="undefined">            error += 1</span></span><br><span class="line"><span class="undefined">            setTimeout(clearAnimation,300)</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        var rate = correct / (correct+error) * 100</span></span><br><span class="line"><span class="undefined">        result.innerText = '正确个数:'+ correct +',错误个数:'+ error +',正确率:'+rate.toFixed(2)+'%'</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    function clearAnimation()&#123;</span></span><br><span class="line"><span class="undefined">        char.className = 'animated'</span></span><br><span class="line"><span class="undefined">    &#125;  </span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    /*</span></span><br><span class="line"><span class="undefined">    //   方法二:</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    window.onkeyup = function(e)&#123;  </span></span><br><span class="line"><span class="undefined">        if(e.key.toUpperCase() == char.innerText)&#123;</span></span><br><span class="line"><span class="undefined">            $('#char').addClass('zoomIn')</span></span><br><span class="line"><span class="undefined">            showChar()</span></span><br><span class="line"><span class="undefined">            // 延时0.3秒钟以后清除动画效果</span></span><br><span class="line"><span class="undefined">            // 否则标签一直有之前的动画效果，那么就不再执行新的动画</span></span><br><span class="line"><span class="undefined">            setTimeout(function()&#123;$('#char').removeClass('zoomIn')&#125;,300)</span></span><br><span class="line"><span class="undefined">            correct += 1</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        else&#123;</span></span><br><span class="line"><span class="undefined">            $('#char').addClass('shake')</span></span><br><span class="line"><span class="undefined">            $('#char').css('color','red').css('text-shadow','0 0 20px greenyellow')</span></span><br><span class="line"><span class="undefined">            setTimeout(function()&#123;$('#char').removeClass('shake').css('color','greenyellow').css('text-shadow','0 0 20px red')&#125;,300)                 </span></span><br><span class="line"><span class="undefined">            error += 1      </span></span><br><span class="line"><span class="undefined">        &#125;        </span></span><br><span class="line"><span class="undefined">        var rate = Math.round(correct / (correct+error) * 100)</span></span><br><span class="line"><span class="undefined">        $('#result').text('正确个数:'+ correct +',错误个数:'+ error +',正确率:'+rate+'%')         </span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    */   </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> char = <span class="built_in">document</span>.getElementById(<span class="string">'char'</span>)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> result = <span class="built_in">document</span>.getElementById(<span class="string">'result'</span>)</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> correct = <span class="number">0</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> error = <span class="number">0</span></span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">showChar</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> random = <span class="built_in">Math</span>.random() * <span class="number">26</span></span></span><br><span class="line"><span class="javascript">        random = <span class="built_in">Math</span>.floor(random) + <span class="number">65</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">// 获取数字在ASCII表中所对应的字母</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> zimu = <span class="built_in">String</span>.fromCharCode(random)</span></span><br><span class="line"><span class="undefined">        char.innerText = zimu</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 方法一:</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onkeyup = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span>(e.key.toUpperCase() == char.innerText)&#123;</span></span><br><span class="line"><span class="javascript">            char.className = <span class="string">'animated zoomIn'</span></span></span><br><span class="line"><span class="undefined">            showChar()</span></span><br><span class="line"><span class="undefined">            correct += 1 </span></span><br><span class="line"><span class="undefined">            setTimeout(clearAnimation,300)</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="javascript">            char.className = <span class="string">'animated shake error'</span></span></span><br><span class="line"><span class="undefined">            error += 1</span></span><br><span class="line"><span class="undefined">            setTimeout(clearAnimation,300)</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> rate = correct / (correct+error) * <span class="number">100</span></span></span><br><span class="line"><span class="javascript">        result.innerText = <span class="string">'正确个数:'</span>+ correct +<span class="string">',错误个数:'</span>+ error +<span class="string">',正确率:'</span>+rate.toFixed(<span class="number">2</span>)+<span class="string">'%'</span></span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">clearAnimation</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        char.className = <span class="string">'animated'</span></span></span><br><span class="line"><span class="undefined">    &#125;  </span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    /*</span></span><br><span class="line"><span class="javascript">    <span class="comment">//   方法二:</span></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onkeyup = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;  </span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span>(e.key.toUpperCase() == char.innerText)&#123;</span></span><br><span class="line"><span class="javascript">            $(<span class="string">'#char'</span>).addClass(<span class="string">'zoomIn'</span>)</span></span><br><span class="line"><span class="undefined">            showChar()</span></span><br><span class="line"><span class="javascript">            <span class="comment">// 延时0.3秒钟以后清除动画效果</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">// 否则标签一直有之前的动画效果，那么就不再执行新的动画</span></span></span><br><span class="line"><span class="javascript">            setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;$(<span class="string">'#char'</span>).removeClass(<span class="string">'zoomIn'</span>)&#125;,<span class="number">300</span>)</span></span><br><span class="line"><span class="undefined">            correct += 1</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">else</span>&#123;</span></span><br><span class="line"><span class="javascript">            $(<span class="string">'#char'</span>).addClass(<span class="string">'shake'</span>)</span></span><br><span class="line"><span class="javascript">            $(<span class="string">'#char'</span>).css(<span class="string">'color'</span>,<span class="string">'red'</span>).css(<span class="string">'text-shadow'</span>,<span class="string">'0 0 20px greenyellow'</span>)</span></span><br><span class="line"><span class="javascript">            setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;$(<span class="string">'#char'</span>).removeClass(<span class="string">'shake'</span>).css(<span class="string">'color'</span>,<span class="string">'greenyellow'</span>).css(<span class="string">'text-shadow'</span>,<span class="string">'0 0 20px red'</span>)&#125;,<span class="number">300</span>)                 </span></span><br><span class="line"><span class="undefined">            error += 1      </span></span><br><span class="line"><span class="undefined">        &#125;        </span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> rate = <span class="built_in">Math</span>.round(correct / (correct+error) * <span class="number">100</span>)</span></span><br><span class="line"><span class="javascript">        $(<span class="string">'#result'</span>).text(<span class="string">'正确个数:'</span>+ correct +<span class="string">',错误个数:'</span>+ error +<span class="string">',正确率:'</span>+rate+<span class="string">'%'</span>)         </span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    */   </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>完整代码与样式文件: <a href="https://github.com/accZMT/python_study/tree/html/%E6%89%93%E5%AD%97%E6%B8%B8%E6%88%8F" target="_blank" rel="noopener">点击跳转</a></p>
 </blockquote>
@@ -424,7 +424,7 @@
 		
     		&copy; 2018 ACCZMT
 
-</span>
+
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -541,10 +541,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">node.js</a>
               </li>
              
@@ -565,11 +561,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">redis</a>
+                <a href="javascript:void(0)" class="js-tag color2">scrapy</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">scrapy</a>
+                <a href="javascript:void(0)" class="js-tag color1">redis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -582,6 +578,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Django</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信公共号</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -601,15 +605,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Django</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信公共号</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tesseract</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
             
             <div class="clearfix"></div>
@@ -617,7 +617,7 @@ MathJax.Hub.Queue(function() {
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
