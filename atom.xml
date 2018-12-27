@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://acczmt.top/"/>
-  <updated>2018-12-27T10:34:59.738Z</updated>
+  <updated>2018-11-23T07:46:45.000Z</updated>
   <id>https://acczmt.top/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>ceshiyong</title>
-    <link href="https://acczmt.top/2018/12/17/test/"/>
-    <id>https://acczmt.top/2018/12/17/test/</id>
-    <published>2018-12-17T10:34:00.000Z</published>
-    <updated>2018-12-27T10:34:59.738Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>nihaoma </p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;nihaoma &lt;/p&gt;
-&lt;/blockquote&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="python" scheme="https://acczmt.top/tags/python/"/>
-    
-  </entry>
   
   <entry>
     <title>微信公共号开发</title>
@@ -529,6 +503,33 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;学习目的：练习selenium的用法，获取&lt;a href=&quot;htt
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://acczmt.top/tags/Python/"/>
+    
+      <category term="selenium" scheme="https://acczmt.top/tags/selenium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>selenium安装</title>
+    <link href="https://acczmt.top/2018/07/31/selenium%E5%AE%89%E8%A3%85/"/>
+    <id>https://acczmt.top/2018/07/31/selenium安装/</id>
+    <published>2018-07-31T13:50:00.000Z</published>
+    <updated>2018-11-23T07:54:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<div align="center"><br><img src="/img/Bing_1280/az/23.jpg" alt="26" title="az-11"><br></div><h2 id="selenium-是一个自动化测试工具"><a href="#selenium-是一个自动化测试工具" class="headerlink" title="selenium 是一个自动化测试工具"></a>selenium 是一个自动化测试工具</h2><h2 id="selenium的特点："><a href="#selenium的特点：" class="headerlink" title="selenium的特点："></a>selenium的特点：</h2><ul><li>1.由程序控制浏览器进行操作，而不是手动操作浏览器</li><li>2.程序控制浏览器进行操作的时候，速度非常慢，所以要谨慎使用selenium</li><li>3.使用selenium控制浏览器的时候，需要下载浏览器对应的驱动程序</li><li>4.selenium为开源，免费，但是更新速度没有浏览器快，不是selenium<br>  更新慢，而是浏览器更新快，要注意selenium和浏览器之间的对应关系</li></ul><p>windows安装可以采用<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure></p><p>如果电脑同时安装了python3 和python2 把pip 改成pip3 或者pip2 就可以了</p><p>然后我们创建一个py文件，使用selenium  <code>注意：文件名一定不要和python包的名字相同，否则会报错</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">driver = webdriver.Firefox()</span><br><span class="line">driver.get(<span class="string">'http://www.baidu.com'</span>)</span><br><span class="line">driver.find_element_by_id(<span class="string">'kw'</span>).send_keys(<span class="string">'selenium'</span>)</span><br></pre></td></tr></table></figure></p><p>运行发现会报错，因为我们没有安装浏览器驱动，下载之前先检查谷歌和火狐浏览器的版本，然后根据版本号下载对应的驱动。</p><p>可以从该<a href="http://chromedriver.chromium.org/downloads" target="_blank" rel="noopener">chromedriver</a>网站下载对应chromedriver的驱动,从<a href="https://github.com/mozilla/geckodriver/releases" target="_blank" rel="noopener">geckodriver</a>下载对应版本的驱动。</p><p>下载完之后将两个压缩包解压，将两个 [ .exe ] 文件放到python同级目录下，与python.exe文件平级即可，比如我的文件路径为 D:\python\Anaconda ，只需要将两个[ .exe ] 文件放到该目录下</p><p>再次运行上面代码，如果出现错误将编译器关闭，重新打开。</p><p>如果出现下面错误，可能是因为网速慢，页面还没有加载出来，程序就执行完毕，导致获取不到element元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selenium.common.exceptions.NoSuchElementException:Message: Unable to locate element: [id=&quot;kw&quot;]</span><br></pre></td></tr></table></figure></p><p>解决办法：可以让程序隐式等待10秒，代码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">driver = webdriver.Firefox()</span><br><span class="line">driver.get(<span class="string">'http://www.baidu.com'</span>)</span><br><span class="line">driver.implicitly_wait(<span class="number">10</span>) <span class="comment">#程序隐式等待10秒</span></span><br><span class="line">driver.find_element_by_id(<span class="string">'kw'</span>).send_keys(<span class="string">'selenium'</span>)</span><br></pre></td></tr></table></figure></p><h3 id="无头浏览器PhantomJS的安装"><a href="#无头浏览器PhantomJS的安装" class="headerlink" title="无头浏览器PhantomJS的安装"></a>无头浏览器PhantomJS的安装</h3><p>首先下载<a href="http://phantomjs.org/download.html" target="_blank" rel="noopener">PhantomJS</a><br>第一种</p><ul><li>下载完成后，放到合适的文件夹下解压，将其路径添加到环境变量中，路径如：D:\python\phantomjs-2.1.1-windows\bin<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line">driver = webdriver.PhantomJS(executable_path=<span class="string">r'D:\python\phantomjs-2.1.1-windows\bin\phantomjs.exe'</span>)</span><br><span class="line">driver.get(<span class="string">'http://www.baidu.com'</span>)</span><br></pre></td></tr></table></figure></li></ul><p>第二种</p><ul><li>下载完成后，解压，将phantomjs.exe放到与python.exe同级目录下，与python.exe文件平级即可<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line">driver = webdriver.PhantomJS()</span><br><span class="line">driver.get(<span class="string">'http://www.baidu.com'</span>)</span><br></pre></td></tr></table></figure></li></ul><p>个人推荐使用第二种，比较方便</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;/img/Bing_1280/az/23.jpg&quot; alt=&quot;26&quot; title=&quot;az-11&quot;&gt;&lt;br&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;selenium-是一个自动化测试工具&quot;&gt;&lt;a href=&quot;#seleni
       
     
     </summary>
